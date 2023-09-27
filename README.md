@@ -1,5 +1,16 @@
 # ABCPB
 
+# How to setup your working environment
+1. Create your project folder (eg. ACBPublishersBookstore)
+2. Move to the foler and type command
+```
+npx create-react-app frontend
+```
+3. Move to the 'frontend' folder. Copy the content of this repository. Run
+```
+npm start
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -71,13 +82,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# How to setup your working environment
-1. Create your project folder (eg. ACBPublishersBookstore)
-2. Move to the foler and type command
-```
-npx create-react-app frontend
-```
-3. Move to the 'frontend' folder. Copy the content of this repository. Run
-```
-npm start
-```
+
