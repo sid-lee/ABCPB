@@ -1,4 +1,14 @@
- .book-title {
+.rating svg {
+  color: #fed53e;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.book-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
