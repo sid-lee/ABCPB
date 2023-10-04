@@ -1,15 +1,51 @@
 # ABCPB
 
-# How to setup your working environment
-1. Create your project folder (eg. ACBPublishersBookstore)
-2. Move to the foler and type command
-```
+# How to set up your working environment
+
+1. Create your project folder (e.g., ACBPublishersBookstore).
+2. Move to the folder and type the command:
+
+```bash
 npx create-react-app frontend
 ```
-3. Move to the 'frontend' folder. Copy the content of this repository. Run
+
+3. Move to the 'frontend' folder. Copy the content of this repository and run:
+
 ```
 npm start
 ```
+
+# Setting up the 'backend'
+1. Move to the parent directory of 'frontend' and initialize npm:
+```
+bash
+npm init
+```
+
+2. Create the 'backend' folder:
+```
+mkdir backend
+echo "Hello, world" > backend/server.js
+```
+3. Edit the 'package.json' file by adding the "start" command under the "scripts" section:
+```
+"scripts": {
+    "start": "node backend/server.js"
+}
+```
+4. Test if the setup is correct by running the following command:
+```
+npm start
+```
+5. If successful, you will see 'Hello, world' on the console.
+
+6. Run the following command to install express
+```
+npm i express
+```
+
+These changes include formatting adjustments and clarifications. Let me know if there's anything else you'd like!
+
 
 # Getting Started with Create React App
 
@@ -81,5 +117,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 
 
