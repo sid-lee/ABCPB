@@ -13,12 +13,12 @@ const Book = ({ book }) => {
 
             <Card.Body>
                 <Link to={`/books/${book._id}`}>
-                    <Card.Title as='div'>
+                    <Card.Title as='div' className='book-title'>
                         <strong>{book.title}</strong>
                     </Card.Title>
                 </Link>
                 <Card.Text as='div'>
-                    <Rating value={ book.rating } text={`${book.reviewsCount} reviews`} />
+                    <Rating value={ book.rating } text={` ${book.reviewsCount} reviews`} />
                 </Card.Text>
                 <Card.Text as='h3'>
                     {book.price}
