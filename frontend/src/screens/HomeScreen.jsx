@@ -1,7 +1,7 @@
-import { Row, Col } from 'react-bootstrap' 
-import books from '../books'
-import React from 'react'
-import Book from '../components/Book'
+import { Row, Col } from 'react-bootstrap' ;
+import books from '../books';
+import React from 'react';
+import Book from '../components/Book';
 
 const HomeScreen = () => {
   return (
