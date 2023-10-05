@@ -46,6 +46,44 @@ npm i express
 
 These changes include formatting adjustments and clarifications. Let me know if there's anything else you'd like!
 
+# Running both front and backend together
+To make your dev life easier, grab nodemon and concurrently. For more information, you can read from npmjs site.
+ nodemon[https://www.npmjs.com/package/nodemon] and concurrently[https://www.npmjs.com/package/concurrently]. Install both by typing the following command.
+
+```
+ npm install -D nodemon concurrently
+```
+
+```
+npm i -D dotenv
+```
+
+Added 'server', 'client' and 'dev' scripts
+
+```
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+```
+
+Peek into your package.json file, and you'll spot some new lines added under "devDependencies".
+
+```
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
+```
+
+To start both, type in 
+```
+npm run dev
+```
+
 
 # Getting Started with Create React App
 

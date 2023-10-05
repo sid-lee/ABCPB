@@ -7,25 +7,25 @@ import logo from  '../assets/logoYellow.png';
 const Header = () => {
     return (
         <header>
-            <Navbar className="bg-body-tertiary" bg="light" data-bs-theme="light" expand="md" collapseOnSelect>
+            <Navbar className='bg-body-tertiary' bg='light' data-bs-theme='light' expand='md' collapseOnSelect>
             <Container>
-                <LinkContainer to="/">
+                <LinkContainer to='/'>
                     <Navbar.Brand>
-                        <img alt=""
+                        <img alt=''
                             src={logo}
-                            width="150"
-                            height="75"
-                            className="d-inline-block align-top"
+                            width='150'
+                            height='75'
+                            className='d-inline-block align-top'
                         />{' '}
                     </Navbar.Brand>
                 </LinkContainer>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                        <LinkContainer to="/cart">
+                <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                <Navbar.Collapse id='basic-navbar-nav'>
+                    <Nav className='ms-auto'>
+                        <LinkContainer to='/cart'>
                             <Nav.Link><FaShoppingCart /> Cart</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/login">
+                        <LinkContainer to='/login'>
                             <Nav.Link><FaUser /> Sign In</Nav.Link>
                         </LinkContainer>
                     </Nav>
