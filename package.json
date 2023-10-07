@@ -22,6 +22,7 @@
   "homepage": "https://github.com/sid-lee/ABCPB#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^7.6.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

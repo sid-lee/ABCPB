@@ -98,6 +98,15 @@ npm run dev
 - 🆕 Automatic data object serialization to multipart/form-data and x-www-form-urlencoded body encodings
 - Client side support for protecting against XSRF
 
+# Note on MongoDB Mongoose
+- Excellent resource for Mongoose in JavaScript
+[https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/] 
+
+To install, from the top directory
+```
+npm i mongoose
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
