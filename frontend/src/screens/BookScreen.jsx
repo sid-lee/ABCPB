@@ -1,16 +1,26 @@
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
+import { useState, useEffect} from 'react';
+import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' 
 import Rating from '../components/Rating'
-import books from '../books'
+import axios from 'axios' 
 
 const BookScreen = () => {
 
+    const [ book, setBook ] = useState({}) ;
     const { id: bookId } = useParams();
-    const book = books.find( (b) => b._id === bookId);
-    console.log(book);
 
-    return <>
+    useEffect( () => {
+        const fetchBook = async () => {
+            const { data } = await axios.get(`/api/books/${bookId}`);
+            setBook(data);
+        }
+
+        fetchBook();
+    }, [bookId])
+
+    return ( 
+        <>
             <Link className='btn btn-light my-3' to='/'>Go Back</Link>
             <Row>
                 <Col md={5}><Image src={book.image} alt={book.title} fluid /></Col>
@@ -46,9 +56,8 @@ const BookScreen = () => {
                     </Card>
                 </Col>
             </Row>
-            <div>BookScreen</div>
         </>
-
+    )
 }
 
 export default BookScreen
