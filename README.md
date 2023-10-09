@@ -118,6 +118,11 @@ To import data
 npm run data:import
 ```
 
+To delete data
+```
+npm run data:destroy
+```
+
 ------
 
 # Getting Started with Create React App
