@@ -102,7 +102,7 @@ npm run dev
 - Excellent resource for Mongoose in JavaScript
 [https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/] 
 
-To install, from the top directory
+From the top directory, install mongoose by running the following command,
 ```
 npm i mongoose
 ```
