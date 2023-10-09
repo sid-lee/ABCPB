@@ -18,33 +18,32 @@ npm start
 # Setting up the 'backend'
 1. Move to the parent directory of 'frontend' and initialize npm:
 ```
-bash
 npm init
 ```
 
 2. Create the 'backend' folder:
 ```
 mkdir backend
-echo "Hello, world" > backend/server.js
 ```
+
 3. Edit the 'package.json' file by adding the "start" command under the "scripts" section:
 ```
 "scripts": {
     "start": "node backend/server.js"
 }
 ```
+
 4. Test if the setup is correct by running the following command:
 ```
 npm start
 ```
+
 5. If successful, you will see 'Hello, world' on the console.
 
 6. Run the following command to install express
 ```
 npm i express
 ```
-
-These changes include formatting adjustments and clarifications. Let me know if there's anything else you'd like!
 
 # Running both front and backend together
 To make your dev life easier, grab nodemon and concurrently. For more information, you can read from npmjs site.
@@ -66,6 +65,8 @@ Added 'server', 'client' and 'dev' scripts
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
   }
 ```
 
