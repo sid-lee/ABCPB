@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from 'mongoose';
 
 const reviewSchema = new mongoose.Schema({
     user: {
@@ -57,9 +57,9 @@ const bookSchema = new mongoose.Schema({
         required: true,
     },
     price: {
-        type: String,
+        type: Number,
         required: true,
-        default: 0,
+        default: 0.0,
     },
     stockQty: {
         type: Number,

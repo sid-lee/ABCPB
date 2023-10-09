@@ -13,7 +13,7 @@ const Header = () => {
                     <Navbar.Brand>
                         <img alt=''
                             src={logo}
-                            width='150'
+                            width='200'
                             height='75'
                             className='d-inline-block align-top'
                         />{' '}

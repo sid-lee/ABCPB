@@ -102,10 +102,24 @@ npm run dev
 - Excellent resource for Mongoose in JavaScript
 [https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/] 
 
-To install, from the top directory
+From the top directory, install mongoose by running the following command
+
 ```
 npm i mongoose
 ```
+
+# Information regarding bcrypt library used
+- Start with wiki [https://en.wikipedia.org/wiki/Bcrypt]
+- Open source [https://www.openwall.com/crypt/]
+- A paper on the algorithm that explains the design decisions[https://static.usenix.org/events/usenix99/provos/provos_html/index.html]
+
+# Generating or deleting test data on MongoDB 
+To import data
+```
+npm run data:import
+```
+
+------
 
 # Getting Started with Create React App
 
