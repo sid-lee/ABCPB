@@ -1,7 +1,6 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Book from '../models/bookModel.js' ;
 
-
 // @desc Fetch all books
 // @route GET/api/books
 // @access Public
@@ -10,7 +9,6 @@ const getBooks = asyncHandler( async (req, res) => {
     const books = await Book.find({}) ;
     res.json( books ) ;
 });
-
 
 // @desc Fetch a books
 // @route GET/api/books/:id
