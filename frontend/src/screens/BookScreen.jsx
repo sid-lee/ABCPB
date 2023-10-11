@@ -27,7 +27,7 @@ const BookScreen = () => {
                 <Col md={4}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item><h3>{book.title}</h3></ListGroup.Item>
-                        <ListGroup.Item><Rating value={book.rating} text={`${book.numReviews} reviews`} /></ListGroup.Item>
+                        <ListGroup.Item><Rating value={book.rating} text={`${book.reviewsCount} reviews`} /></ListGroup.Item>
                         <ListGroup.Item>Price: $ {book.price}</ListGroup.Item>
                         <ListGroup.Item>Description: {book.description}</ListGroup.Item>
                     </ListGroup>
