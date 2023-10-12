@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from  'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { SiBookstack } from 'react-icons/si';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import logo from  '../assets/logoYellow.png';
@@ -11,12 +12,18 @@ const Header = () => {
             <Container>
                 <LinkContainer to='/'>
                     <Navbar.Brand>
-                        <img alt=''
-                            src={logo}
-                            width='200'
-                            height='75'
-                            className='d-inline-block align-top'
-                        />{' '}
+                        <div className="logo-container">
+                            <div className="logo-icon">
+                                <h1><SiBookstack /></h1>
+                            </div>
+                            <div className="brand-name">
+                                <div className="top-line">
+                                    <span className="word1">ABC</span>
+                                    <span className="word2">Publishers</span>
+                                </div>
+                                <div className="bottom-line">Bookstore</div>
+                            </div>
+                        </div>
                     </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />

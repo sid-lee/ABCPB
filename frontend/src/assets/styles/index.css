@@ -13,6 +13,53 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 33.33%;
+}
+
+.brand-name {
+  width: 66.67%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-line {
+  display: flex;
+  align-items: flex-end; /* Align the items at the bottom */
+}
+
+.word1, .word2, .bottom-line {
+  font-family: 'Poppins', sans-serif;
+}
+
+.word1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.word2 {
+  font-size: 12px;
+  background-color: #fed53e; /* Use the same background color as Publishers */
+  border-radius: 30px;
+  padding: 2px 3px;
+  transform: rotate(-5deg);
+  margin-bottom: 5px;
+}
+
+.bottom-line {
+  margin-top: -5px; /* Adjust the margin to align with the top line */
+  font-size: 24px;
+}
+
+.logo-icon {
+  width: 100%; /* Make the image fill its container */
+  color: #fed53e; 
+}
 
 body {
   margin: 0;

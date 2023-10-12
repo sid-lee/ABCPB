@@ -17,7 +17,7 @@ const Book = ({ book }) => {
                         <strong>{book.title}</strong>
                     </Card.Title>
                 </Link>
-                <Card.Text as='div'>text={`${book.numReviews} reviews`}
+                <Card.Text as='div'> 
                     <Rating value={ book.rating } text={` ${book.reviewsCount} reviews`} />
                 </Card.Text>
                 <Card.Text as='h3'>

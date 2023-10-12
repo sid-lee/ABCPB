@@ -5,15 +5,12 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 // import HomeScreen from './screens/HomeScreen'
 
-
 const App = () => {
   return (
     <>
       <Header />
       <main className="py-3">
         <Container>
-            {/* <h1>Welcome To ABC Publishers Bookstore</h1> */}
-            {/* <HomeScreen /> */}
             <Outlet />
         </Container>
       </main>
