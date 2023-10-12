@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Brand>
                         <div className="logo-container">
                             <div className="logo-icon">
-                                <h1><SiBookstack /></h1>
+                                <SiBookstack size={64}/>
                             </div>
                             <div className="brand-name">
                                 <div className="top-line">

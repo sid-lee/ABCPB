@@ -13,6 +13,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -20,6 +21,7 @@
 
 .logo-icon {
   width: 33.33%;
+  color: #fed53e; 
 }
 
 .brand-name {
@@ -39,26 +41,21 @@
 
 .word1 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .word2 {
-  font-size: 12px;
+  font-size: 0.75em;
   background-color: #fed53e; /* Use the same background color as Publishers */
-  border-radius: 30px;
+  border-radius: 1.875em;
   padding: 2px 3px;
   transform: rotate(-5deg);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .bottom-line {
   margin-top: -5px; /* Adjust the margin to align with the top line */
-  font-size: 24px;
-}
-
-.logo-icon {
-  width: 100%; /* Make the image fill its container */
-  color: #fed53e; 
+  font-size: 1.5em;
 }
 
 body {
