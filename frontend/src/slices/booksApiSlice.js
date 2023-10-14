@@ -1,7 +1,6 @@
 import { BOOKS_URL } from "../constants";
 import { apiSlice  } from "./apiSlice";
 
-
 // Using redux to handle fetch, get requests rather than using axios, useState, useEffect
 export const booksApiSlices = apiSlice.injectEndpoints({
     endpoints: ( builder ) => ({ 
@@ -9,9 +8,18 @@ export const booksApiSlices = apiSlice.injectEndpoints({
             query: () => ({
                 url: BOOKS_URL, 
             }),
-            keepUnsedDataFor: 5
+            //keep the data for 5 seconds
+            keepUnusedDataFor: 5
+        }),
+        getBookDetails: builder.query({
+            query: (bookId) => ({
+                url: `{BOOKS_URL}/${bookId}`, 
+            }),
+            keepUnusedDataFor: 5
         })
     }),
+    
 });
 
-export const { useGetBooksQuery } = booksApiSlices ;
+export const { useGetBooksQuery, useGetBookDetailsQuery } = 
+    booksApiSlices ;

@@ -1,28 +1,24 @@
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { useState, useEffect} from 'react';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' 
 import Rating from '../components/Rating'
-import axios from 'axios' 
+import { useGetBookDetailsQuery } from '../slices/booksApiSlice';
 
 const BookScreen = () => {
 
-    const [ book, setBook ] = useState({}) ;
     const { id: bookId } = useParams();
-
-    useEffect( () => {
-        const fetchBook = async () => {
-            const { data } = await axios.get(`/api/books/${bookId}`);
-            setBook(data);
-        }
-
-        fetchBook();
-    }, [bookId])
+    const { data: book, isLoading, error } = useGetBookDetailsQuery( bookId );
 
     return ( 
         <>
             <Link className='btn btn-light my-3' to='/'>Go Back</Link>
-            <Row>
+            
+            { isLoading ? (
+                <h2>Loading...</h2>
+            ) : error ? (
+                <div>{ error?.data?.message || error.error }</div>
+            ) : (
+                <Row>
                 <Col md={5}><Image src={book.image} alt={book.title} fluid /></Col>
                 <Col md={4}>
                     <ListGroup variant='flush'>
@@ -56,6 +52,7 @@ const BookScreen = () => {
                     </Card>
                 </Col>
             </Row>
+            ) }
         </>
     )
 }
