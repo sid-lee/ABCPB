@@ -53,6 +53,10 @@
   margin-bottom: 8px;
 }
 
+.word2:hover {
+  transform: rotate(0deg);
+}
+
 .bottom-line {
   margin-top: -5px; /* Adjust the margin to align with the top line */
   font-size: 1.5em;
