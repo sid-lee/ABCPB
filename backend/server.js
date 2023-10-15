@@ -11,14 +11,18 @@ connectDB();
 
 const port = process.env.PORT || 5001 ;
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/api/books', bookRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running...')
 });
 
-app.use('/api/books', bookRoutes);
-
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => 
+    console.log(`Server running on port ${port}`)
+);

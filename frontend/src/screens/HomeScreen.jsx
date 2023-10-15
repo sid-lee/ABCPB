@@ -2,6 +2,7 @@ import { Row, Col } from 'react-bootstrap' ;
 import React from 'react';
 import Book from '../components/Book';
 import { useGetBooksQuery } from '../slices/booksApiSlice';
+import Loader from '../components/Loader';
 
 const HomeScreen = () => {
 
@@ -10,8 +11,11 @@ const HomeScreen = () => {
   return (
     <>
       { isLoading ? (
-          <h2>Loading...</h2>
-        ) : error ? ( <div>{ error?.data.message || error.error }</div> ) : (
+          // <h2>Loading...</h2>
+          <Loader />
+        ) : error ? ( 
+          <div>{ error?.data.message || error.error }</div> 
+        ) : (
             <>
               <h2>Latest Books</h2>
               <Row>

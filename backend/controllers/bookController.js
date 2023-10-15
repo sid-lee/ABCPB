@@ -1,4 +1,4 @@
-import asyncHandler from "../middleware/asyncHandler.js";
+import asyncHandler from '../middleware/asyncHandler.js';
 import Book from '../models/bookModel.js' ;
 
 // @desc Fetch all books
@@ -8,9 +8,10 @@ const getBooks = asyncHandler( async (req, res) => {
 
     const books = await Book.find({}) ;
     res.json( books ) ;
+    
 });
 
-// @desc Fetch a books
+// @desc Fetch a book
 // @route GET/api/books/:id
 // @access Public
 const getBookById = asyncHandler( async (req, res) => {
@@ -19,10 +20,16 @@ const getBookById = asyncHandler( async (req, res) => {
 
     if ( book ) {
         return res.json(book) ;
-    } else {
-        res.status(400) ;
-        throw new Error('Resource not found');
+    } 
+    else {
+        // NOTE: this will run if a valid ObjectId but no product was found
+        // i.e. product may be null
+        res.status(404) ;
+        throw new Error('Book not found');
     }
 });
 
-export { getBooks, getBookById }
+export { 
+    getBooks, 
+    getBookById 
+};
