@@ -1,24 +1,30 @@
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' 
-import Rating from '../components/Rating'
-import { useGetBookDetailsQuery } from '../slices/booksApiSlice';
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Form, Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' ;
+import Rating from '../components/Rating';
 import Loader from '../components/Loader';
+import Message from '../components/Message';
+import { useGetBookDetailsQuery } from '../slices/booksApiSlice';
 
 const BookScreen = () => {
 
     const { id: bookId } = useParams();
+
+    const [ qty, setQty ] = useState(1);
+
     const { data: book, isLoading, error } = useGetBookDetailsQuery( bookId );
+
+    // console.log( [...Array(book.stockQty).keys()] );    
 
     return ( 
         <>
             <Link className='btn btn-light my-3' to='/'>Go Back</Link>
-            
+
             { isLoading ? (
-                // <h2>Loading...</h2>
                 <Loader />
             ) : error ? (
-                <div>{ error?.data?.message || error.error }</div>
+                <Message variant='danger'>{ error?.data.message || error.error }</Message> 
             ) : (
                 <Row>
                     <Col md={5}><Image src={book.image} alt={book.title} fluid /></Col>
@@ -42,11 +48,34 @@ const BookScreen = () => {
                                 <ListGroup.Item>
                                     <Row>
                                         <Col>Status:</Col>
-                                        <Col><strong> {book.countInStock > 0 ? 'In Stock' : 'Out of Stock' } </strong></Col>
+                                        <Col><strong> {book.stockQty > 0 ? 'In Stock' : 'Out of Stock' } </strong></Col>
                                     </Row>
                                 </ListGroup.Item>
+
+
+                                { book.stockQty > 0 && (
+                                    <ListGroup.Item>
+                                        <Row>
+                                            <Col>Qty</Col>
+                                            <Col>
+                                                <Form.Control
+                                                    as='select'
+                                                    value={qty}
+                                                    onChange={(e) => setQty(Number(e.target.value))}>
+                                                    {[...Array(book.stockQty).keys()].map((x)=> (
+                                                        <option key={ x + 1} value={x + 1}>
+                                                            { x + 1 }
+                                                        </option>
+                                                    ))}    
+                                                </Form.Control>
+                                            </Col>
+                                        </Row>
+                                    </ListGroup.Item>
+
+                                )}
+
                                 <ListGroup.Item>
-                                    <Button className='btn-block' type='button' disabled={book.countInStock === 0}>
+                                    <Button className='btn-block' type='button' disabled={book.stockQty === 0}>
                                         Add To Cart
                                     </Button>
                                 </ListGroup.Item>
@@ -57,6 +86,6 @@ const BookScreen = () => {
             ) }
         </>
     )
-}
+};
 
-export default BookScreen
+export default BookScreen;
