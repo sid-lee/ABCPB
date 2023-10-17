@@ -79,7 +79,6 @@ const BookScreen = () => {
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
-
                                 )}
 
                                 <ListGroup.Item>
