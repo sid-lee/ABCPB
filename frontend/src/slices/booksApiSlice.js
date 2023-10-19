@@ -5,16 +5,12 @@ import { apiSlice  } from './apiSlice';
 export const booksApiSlice = apiSlice.injectEndpoints({
     endpoints: ( builder ) => ({ 
         getBooks: builder.query({
-            query: () => ({
-                url: BOOKS_URL, 
-            }),
+            query: () => ({ url: BOOKS_URL,  }),
             //keep the data for 5 seconds
             keepUnusedDataFor: 5,
         }),
         getBookDetails: builder.query({
-            query: (bookId) => ({
-              url: `${BOOKS_URL}/${bookId}`, 
-            }),
+            query: (bookId) => ({ url: `${BOOKS_URL}/${bookId}`,  }),
             keepUnusedDataFor: 5,
         }),
     }),

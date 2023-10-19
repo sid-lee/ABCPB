@@ -33,7 +33,7 @@ userSchema.methods.matchPassword = async function (enteredPassword){
 // Encrypt password using bcrypt
 userSchema.pre('save', async function (next) {
 
-    if (!this.isModified('password')) {
+    if ( !this.isModified('password') ) {
         next();
     }
 
