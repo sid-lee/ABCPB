@@ -20,6 +20,8 @@ const Header = () => {
     const logoutHandler = async() => {
         try {
             await logoutApiCall().unwrap();
+            
+            // clear localStorage
             dispatch(logout());
             navigate('/login');
 
@@ -27,6 +29,7 @@ const Header = () => {
             console.log(err);
         }
     }
+
     return (
         <header>
             <Navbar className='bg-body-tertiary' bg='light' data-bs-theme='light' expand='md' collapseOnSelect>

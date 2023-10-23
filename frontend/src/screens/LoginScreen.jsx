@@ -10,6 +10,7 @@ import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
 const LoginScreen = () => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -25,12 +26,14 @@ const LoginScreen = () => {
   const redirect = sp.get('redirect') || '/';
 
   useEffect(() => {
+    
     if (userInfo) {
       navigate(redirect);
     }
   }, [navigate, redirect, userInfo]);
 
   const submitHandler = async (e) => {
+    
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();

@@ -3,7 +3,6 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
 import { useDispatch, useSelector } from 'react-redux';
-import { createContext } from 'react';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
 const CartScreen = () => {
@@ -47,13 +46,10 @@ const CartScreen = () => {
                                     </Col>
                                     <Col md={2}>${item.price}</Col>
                                     <Col md={2}>
-                                        <Form.Control
-                                            as='select'
-                                            value={item.qty}
+                                        <Form.Control as='select' value={item.qty}
                                             onChange={(e) => {
                                                 addToCartHandler(item, Number(e.target.value))
                                             } }>
-
                                             {[...Array(Math.min(10, item.stockQty)).keys()].map((x) => (
                                                 <option key={ x + 1} value={x + 1}>
                                                     { x + 1 }
@@ -62,9 +58,7 @@ const CartScreen = () => {
                                         </Form.Control>
                                     </Col>
                                     <Col md={2}>
-                                        <Button 
-                                            type='button' 
-                                            variant='light'
+                                        <Button type='button' variant='light'
                                             onClick={() => removeFromCartHandler(item._id)}>
                                             <FaTrash />
                                         </Button>
@@ -89,11 +83,9 @@ const CartScreen = () => {
                                 .toFixed(2)}
                             </ListGroup.Item>
                             <ListGroup.Item>
-                            <Button
-                                type='button'
-                                className='btn-block'
+                            <Button type='button' className='btn-block'
                                 disabled={cartItems.length === 0}
-                                // onClick={checkoutHandler}
+                                onClick={checkoutHandler}
                             >
                                 Proceed To Checkout
                             </Button>
