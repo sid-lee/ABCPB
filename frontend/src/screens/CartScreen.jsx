@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom' ;
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
+import CustomQuantityInput from '../components/CustomQuantityInput';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
@@ -42,11 +43,15 @@ const CartScreen = () => {
                                         <Image src={item.image} alt={item.title} fluid rounded />
                                     </Col>
                                     <Col md={3}>
-                                        <Link to={`/book/${item._id}`}>{item.title}</Link>
+                                        <Link to={`/books/${item._id}`}>{item.title}</Link>
                                     </Col>
                                     <Col md={2}>${item.price}</Col>
                                     <Col md={2}>
-                                        <Form.Control as='select' value={item.qty}
+                                    <CustomQuantityInput value={item.qty} stockQty={item.stockQty}
+                                                onChange={(inputQty) => addToCartHandler(item, inputQty)}
+                                    />
+
+                                        {/* <Form.Control as='select' value={item.qty}
                                             onChange={(e) => {
                                                 addToCartHandler(item, Number(e.target.value))
                                             } }>
@@ -55,7 +60,7 @@ const CartScreen = () => {
                                                     { x + 1 }
                                                 </option>
                                             ))}    
-                                        </Form.Control>
+                                        </Form.Control> */}
                                     </Col>
                                     <Col md={2}>
                                         <Button type='button' variant='light'

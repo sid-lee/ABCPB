@@ -66,16 +66,24 @@ const BookScreen = () => {
                                         <Row>
                                             <Col>Qty</Col>
                                             <Col>
-                                                <Form.Control
-                                                    as='select'
-                                                    value={qty}
-                                                    onChange={(e) => setQty(Number(e.target.value))}>
+
+                                                <Form.Control type="number" min="1" max={book.stockQty} value={qty}
+                                                            onChange={(e) => {
+                                                                const inputQty = parseInt(e.target.value, 10);
+                                                                if (!isNaN(inputQty) && inputQty >= 1 && inputQty <= book.stockQty) {
+                                                                setQty(inputQty);
+                                                                }
+                                                            }}
+                                                />
+
+                                                {/* <Form.Control as='select' value={qty} onChange={(e) => setQty(Number(e.target.value))}>
                                                     {[...Array(book.stockQty).keys()].map((x)=> (
                                                         <option key={ x + 1} value={x + 1}>
                                                             { x + 1 }
                                                         </option>
                                                     ))}    
-                                                </Form.Control>
+                                                </Form.Control> */}
+
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>

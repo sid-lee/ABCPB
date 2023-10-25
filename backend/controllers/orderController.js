@@ -17,10 +17,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
     throw new Error('No order items');
 
   } else {
-    // Assume that the prices from client are incorrect.
-    // Only trust the price of the item in the DB. 
 
-    // get the ordered items from our database
+    // Assuming that the prices from client might be incorrect
+    // Getting the ordered item price in the DB
     const itemsFromDB = await Book.find({  _id: { $in: orderItems.map((x) => x._id) }, });
 
     // map over the order items and use the price from items from database
@@ -61,6 +60,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
 // @route   GET /api/orders/myorders
 // @access  Private
 const getMyOrders = asyncHandler(async (req, res) => {
+  
   const orders = await Order.find({ user: req.user._id });
   res.json(orders);
 });
@@ -69,6 +69,7 @@ const getMyOrders = asyncHandler(async (req, res) => {
 // @route   GET /api/orders/:id
 // @access  Private
 const getOrderById = asyncHandler(async (req, res) => {
+
   const order = await Order.findById(req.params.id).populate(
     'user',
     'name email'
@@ -76,7 +77,9 @@ const getOrderById = asyncHandler(async (req, res) => {
 
   if (order) {
     res.json(order);
+
   } else {
+
     res.status(404);
     throw new Error('Order not found');
   }
@@ -87,13 +90,13 @@ const getOrderById = asyncHandler(async (req, res) => {
 // @access  Private
 const updateOrderToPaid = asyncHandler(async (req, res) => {
 
-//   // Verify the payment made to PayPal before marking the order as paid
-//   const { verified, value } = await verifyPayPalPayment(req.body.id);
-//   if (!verified) throw new Error('Payment not verified');
+  // Verify the payment made to PayPal before marking the order as paid
+  const { verified, value } = await verifyPayPalPayment(req.body.id);
+  if (!verified) throw new Error('Payment not verified');
 
-//   // check if this transaction has been used before
-//   const isNewTransaction = await checkIfNewTransaction(Order, req.body.id);
-//   if (!isNewTransaction) throw new Error('Transaction has been used before');
+  // check if this transaction has been used before
+  const isNewTransaction = await checkIfNewTransaction(Order, req.body.id);
+  if (!isNewTransaction) throw new Error('Transaction has been used before');
 
   const order = await Order.findById(req.params.id);
 
@@ -115,7 +118,9 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     const updatedOrder = await order.save();
 
     res.json(updatedOrder);
+
   } else {
+
     res.status(404);
     throw new Error('Order not found');
   }
@@ -128,13 +133,16 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
 
   if (order) {
+
     order.isDelivered = true;
     order.deliveredAt = Date.now();
 
     const updatedOrder = await order.save();
 
     res.json(updatedOrder);
+
   } else {
+
     res.status(404);
     throw new Error('Order not found');
   }
@@ -144,6 +152,7 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 // @route   GET /api/orders
 // @access  Private/Admin
 const getOrders = asyncHandler(async (req, res) => {
+
   const orders = await Order.find({}).populate('user', 'id name');
   res.json(orders);
 });
