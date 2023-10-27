@@ -2,7 +2,7 @@ import asyncHandler from '../middleware/asyncHandler.js';
 import Order from '../models/orderModel.js';
 import Book from '../models/bookModel.js';
 import { calcPrices } from '../utils/calcPrices.js';
-// import { verifyPayPalPayment, checkIfNewTransaction } from '../utils/paypal.js';
+import { verifyPayPalPayment, checkIfNewTransaction } from '../utils/paypal.js';
 
 // @desc    Create new order
 // @route   POST /api/orders
@@ -25,7 +25,8 @@ const addOrderItems = asyncHandler(async (req, res) => {
     // map over the order items and use the price from items from database
     const dbOrderItems = orderItems.map((itemFromClient) => {
 
-      const matchingItemFromDB = itemsFromDB.find( (itemFromDB) => itemFromDB._id.toString() === itemFromClient._id );
+      const matchingItemFromDB = itemsFromDB.find( 
+        (itemFromDB) => itemFromDB._id.toString() === itemFromClient._id );
       
       return {
         ...itemFromClient,

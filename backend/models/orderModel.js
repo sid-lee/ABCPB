@@ -4,19 +4,19 @@ const orderSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: "User",
+        ref: 'User',
     },
     orderItems: [
         {
+            book: {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: 'Book',
+            },
             title: { type: String, required: true },
             qty: { type: Number, required: true },
             image: { type: String, required: true },
             price: { type: Number, required: true },
-            book: { 
-                type: mongoose.Schema.Types.ObjectId, 
-                required: true, 
-                ref: "Book",
-            },
         }
     ],
     shippingAddress: {
@@ -62,8 +62,7 @@ const orderSchema = mongoose.Schema({
     },
     deliveredAt: {
         type: Date,
-        required: true,
-        default: false,
+        default: null,
     }
 }, {
     timestamps: true,

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Form, Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' ;
+import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap' ;
 import { useDispatch } from 'react-redux';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import CustomQuantityInput from '../components/CustomQuantityInput';
 import { useGetBookDetailsQuery } from '../slices/booksApiSlice';
 import { addToCart } from '../slices/cartSlice';
 
@@ -22,7 +23,7 @@ const BookScreen = () => {
 
     const addToCartHandler = () => {
         dispatch(addToCart({ ...book, qty }));
-        navigate('cart');
+        navigate('/cart');
     };
 
     return ( 
@@ -67,14 +68,9 @@ const BookScreen = () => {
                                             <Col>Qty</Col>
                                             <Col>
 
-                                                <Form.Control type="number" min="1" max={book.stockQty} value={qty}
-                                                            onChange={(e) => {
-                                                                const inputQty = parseInt(e.target.value, 10);
-                                                                if (!isNaN(inputQty) && inputQty >= 1 && inputQty <= book.stockQty) {
-                                                                setQty(inputQty);
-                                                                }
-                                                            }}
-                                                />
+                                            <CustomQuantityInput value={qty} stockQty={book.stockQty}
+                                                    onChange={(inputQty) => setQty(inputQty)}
+                                            />
 
                                                 {/* <Form.Control as='select' value={qty} onChange={(e) => setQty(Number(e.target.value))}>
                                                     {[...Array(book.stockQty).keys()].map((x)=> (

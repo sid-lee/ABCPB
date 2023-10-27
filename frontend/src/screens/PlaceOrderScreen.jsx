@@ -57,7 +57,7 @@ const PlaceOrderScreen = () => {
               <p>
                 <strong>Address:</strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
-                {cart.shippingAddress.postalCode},{' '}
+                {cart.shippingAddress.postalCode}, {' '}
                 {cart.shippingAddress.country}
               </p>
             </ListGroup.Item>
@@ -81,7 +81,7 @@ const PlaceOrderScreen = () => {
                           <Image src={item.image} alt={item.title} fluid rounded />
                         </Col>
                         <Col>
-                          <Link to={`/books/${item.book}`}>
+                          <Link to={`/book/${item._id}`}>
                             {item.title}
                           </Link>
                         </Col>

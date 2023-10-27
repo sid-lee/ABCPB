@@ -15,7 +15,7 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux' ;
 import store from './store';
-
+import PrivateRoute from './components/PrivateRoute';
 import HomeScreen from './screens/HomeScreen';
 import BookScreen from './screens/BookScreen';
 import CartScreen from './screens/CartScreen';
@@ -24,7 +24,6 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import PrivateRoute from './components/PrivateRoute';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

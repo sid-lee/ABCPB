@@ -5,6 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../slices/authSlice';
+import { resetCart } from '../slices/cartSlice';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 
 const Header = () => {
@@ -23,6 +24,7 @@ const Header = () => {
             
             // clear localStorage
             dispatch(logout());
+            dispatch(resetCart());
             navigate('/login');
 
         } catch(err){
@@ -68,7 +70,7 @@ const Header = () => {
 
                         { userInfo ? (
                             <NavDropdown title={userInfo.name} id='username'>
-                                <LinkContainer to='profile'>
+                                <LinkContainer to='/profile'>
                                     <NavDropdown.Item>Profile</NavDropdown.Item>
                                 </LinkContainer>
                                 <NavDropdown.Item onClick={logoutHandler}>
