@@ -87,7 +87,6 @@ const bookSchema = new mongoose.Schema({
     },
     google_id: {
         type: String,
-        required: true,
     },
     subject: {
         type: String,
