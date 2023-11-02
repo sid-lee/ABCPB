@@ -2,8 +2,8 @@ import express from 'express';
 const router = express.Router();
 import {
   getBooks,
-  getBookById
-//   createBook
+  getBookById,
+  createBook
 //   updateBook,
 //   deleteBook,
 //   createBookReview,
@@ -12,8 +12,7 @@ import {
 import { protect, admin } from '../middleware/authMiddleware.js';
 import checkObjectId from '../middleware/checkObjectId.js';
 
-router.route('/').get(getBooks);
-// .post(protect, admin, createBook);
+router.route('/').get(getBooks).post(protect, admin, createBook);
 // router.route('/:id/reviews').post(protect, checkObjectId, createBookReview);
 // router.get('/top', getTopBooks);
 router

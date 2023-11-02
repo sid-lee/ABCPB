@@ -33,8 +33,10 @@ const OrderScreen = () => {
   } = useGetPaypalClientIdQuery();
 
   useEffect(() => {
+
     if (!errorPayPal && !loadingPayPal && paypal.clientId) {
       const loadPaypalScript = async () => {
+
         paypalDispatch({
           type: 'resetOptions',
           value: {
@@ -44,6 +46,7 @@ const OrderScreen = () => {
         });
         paypalDispatch({ type: 'setLoadingStatus', value: 'pending' });
       };
+
       if (order && !order.isPaid) {
         if (!window.paypal) {
           loadPaypalScript();
@@ -57,7 +60,7 @@ const OrderScreen = () => {
       try {
         await payOrder({ orderId, details });
         refetch();
-        toast.success('Order is paid');
+        toast.success(`Order is paid  ${orderId} ${details}`);
       } catch (err) {
         toast.error(err?.data?.message || err.error);
       }
@@ -65,12 +68,12 @@ const OrderScreen = () => {
   }
 
   // TESTING ONLY! REMOVE BEFORE PRODUCTION
-  // async function onApproveTest() {
-  //   await payOrder({ orderId, details: { payer: {} } });
-  //   refetch();
+  async function onApproveTest() {
+    await payOrder({ orderId, details: { payer: {} } });
+    refetch();
 
-  //   toast.success('Order is paid');
-  // }
+    toast.success(`Order is paid  ${orderId}`);
+  }
 
   function onError(err) {
     toast.error(err.message);
@@ -81,10 +84,16 @@ const OrderScreen = () => {
       .create({
         purchase_units: [
           {
-            amount: { value: order.totalPrice },
+            reference_id: orderId,
+            currency_code: "CAD",
+            amount: { value: order.totalPrice, shippingPrice: order.shippingPrice, tax: order.taxPrice },
+            // id: orderId,
           },
         ],
       })
+      // .then((orderId) => {
+      //   return orderId;
+
       .then((orderID) => {
         return orderID;
       });
@@ -152,11 +161,11 @@ const OrderScreen = () => {
                     <ListGroup.Item key={index}>
                       <Row>
                         <Col md={1}>
-                          <Image src={item.image} alt={item.name} fluid rounded />
+                          <Image src={item.image} alt={item.title} fluid rounded />
                         </Col>
                         <Col>
                           <Link to={`/book/${item.book}`}>
-                            {item.name}
+                            {item.title}
                           </Link>
                         </Col>
                         <Col md={4}>
@@ -210,12 +219,12 @@ const OrderScreen = () => {
                   ) : (
                     <div>
                       {/* THIS BUTTON IS FOR TESTING! REMOVE BEFORE PRODUCTION! */}
-                      {/* <Button
+                      <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
                       >
                         Test Pay Order
-                      </Button> */}
+                      </Button>
 
                       <div>
                         <PayPalButtons

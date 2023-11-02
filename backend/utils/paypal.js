@@ -3,40 +3,60 @@ dotenv.config();
 const { PAYPAL_CLIENT_ID, PAYPAL_APP_SECRET, PAYPAL_API_URL } = process.env;
 
 /**
- * Fetches an access token from the PayPal API.
- * @see {@link https://developer.paypal.com/reference/get-an-access-token/#link-getanaccesstoken}
- *
- * @returns {Promise<string>} The access token if the request is successful.
- * @throws {Error} If the request is not successful.
- *
+ * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
+ * @see https://developer.paypal.com/api/rest/authentication/
  */
+// const generateAccessToken = async () => {
+
 async function getPayPalAccessToken() {
-  // Authorization header requires base64 encoding
-  const auth = Buffer.from(PAYPAL_CLIENT_ID + ':' + PAYPAL_APP_SECRET).toString(
-    'base64'
-  );
 
-  const url = `${PAYPAL_API_URL}/v1/oauth2/token`;
+  try {
+    if (!PAYPAL_CLIENT_ID || !PAYPAL_APP_SECRET) {
+      throw new Error("MISSING_API_CREDENTIALS");
+    }
+    const auth = Buffer.from(
+      PAYPAL_CLIENT_ID + ":" + PAYPAL_APP_SECRET,
+    ).toString("base64");
 
-  const headers = {
-    Accept: 'application/json',
-    'Accept-Language': 'en_US',
-    Authorization: `Basic ${auth}`,
-  };
+    const response = await fetch(`${PAYPAL_API_URL}/v1/oauth2/token`, {
+      method: "POST",
+      body: "grant_type=client_credentials",
+      headers: {
+        Authorization: `Basic ${auth}`,
+      },
+    });
 
-  const body = 'grant_type=client_credentials';
+    const data = await response.json();
+    return data.access_token;
+    
+  } catch (error) {
+    console.error("Failed to generate Access Token:", error);
+  }
+};
+
+/**
+ * Capture payment for the created order to complete the transaction.
+ * @see https://developer.paypal.com/docs/api/orders/v2/#orders_capture
+ */
+const captureOrder = async (orderID) => {
+  const accessToken = await getPayPalAccessToken();
+  const url = `${base}/v2/checkout/orders/${orderID}/capture`;
+
   const response = await fetch(url, {
-    method: 'POST',
-    headers,
-    body,
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+      // Uncomment one of these to force an error for negative testing (in sandbox mode only). Documentation:
+      // https://developer.paypal.com/tools/sandbox/negative-testing/request-headers/
+      // "PayPal-Mock-Response": '{"mock_application_codes": "INSTRUMENT_DECLINED"}'
+      // "PayPal-Mock-Response": '{"mock_application_codes": "TRANSACTION_REFUSED"}'
+      // "PayPal-Mock-Response": '{"mock_application_codes": "INTERNAL_SERVER_ERROR"}'
+    },
   });
 
-  if (!response.ok) throw new Error('Failed to get access token');
-
-  const paypalData = await response.json();
-
-  return paypalData.access_token;
-}
+  return handleResponse(response);
+};
 
 /**
  * Checks if a PayPal transaction is new by comparing the transaction ID with existing orders in the database.
@@ -50,9 +70,11 @@ async function getPayPalAccessToken() {
 export async function checkIfNewTransaction(orderModel, paypalTransactionId) {
   try {
     // Find all documents where Order.paymentResult.id is the same as the id passed paypalTransactionId
+
     const orders = await orderModel.find({
       'paymentResult.id': paypalTransactionId,
     });
+    console.log("orderModel :" , orderModel, ", paypalTransactionId :",paypalTransactionId);
 
     // If there are no such orders, then it's a new transaction.
     return orders.length === 0;
@@ -71,6 +93,7 @@ export async function checkIfNewTransaction(orderModel, paypalTransactionId) {
  *
  */
 export async function verifyPayPalPayment(paypalTransactionId) {
+
   const accessToken = await getPayPalAccessToken();
   const paypalResponse = await fetch(
     `${PAYPAL_API_URL}/v2/checkout/orders/${paypalTransactionId}`,
@@ -81,6 +104,7 @@ export async function verifyPayPalPayment(paypalTransactionId) {
       },
     }
   );
+
   if (!paypalResponse.ok) throw new Error('Failed to verify payment');
 
   const paypalData = await paypalResponse.json();

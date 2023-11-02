@@ -14,10 +14,18 @@ export const booksApiSlice = apiSlice.injectEndpoints({
             query: (bookId) => ({ url: `${BOOKS_URL}/${bookId}`,  }),
             keepUnusedDataFor: 5,
         }),
+        createBook: builder.mutation({
+            query: () =>({
+                url: BOOKS_URL,
+                method: 'POST',
+            }),
+            invalidatesTags: ['Book'],
+        })
     }),
 });
 
 export const { 
     useGetBooksQuery, 
-    useGetBookDetailsQuery 
+    useGetBookDetailsQuery,
+    useCreateBookMutation 
 } = booksApiSlice ;
