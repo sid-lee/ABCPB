@@ -20,12 +20,29 @@ export const booksApiSlice = apiSlice.injectEndpoints({
                 method: 'POST',
             }),
             invalidatesTags: ['Book'],
-        })
+        }),
+        updateBook: builder.mutation({
+            query: (data) => ({
+              url: `${BOOKS_URL}/${data.bookId}`,
+              method: 'PUT',
+              body: data,
+            }),
+            invalidatesTags: ['Books'],
+        }),
+        uploadBookImage: builder.mutation({
+            query: (data) => ({
+              url: `/api/uploads`,
+              method: 'POST',
+              body: data,
+            }),
+        }),
     }),
 });
 
 export const { 
     useGetBooksQuery, 
     useGetBookDetailsQuery,
-    useCreateBookMutation 
+    useCreateBookMutation,
+    useUpdateBookMutation,
+    useUploadBookImageMutation
 } = booksApiSlice ;

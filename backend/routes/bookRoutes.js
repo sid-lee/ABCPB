@@ -3,8 +3,8 @@ const router = express.Router();
 import {
   getBooks,
   getBookById,
-  createBook
-//   updateBook,
+  createBook,
+  updateBook
 //   deleteBook,
 //   createBookReview,
 //   getTopBooks,
@@ -17,8 +17,7 @@ router.route('/').get(getBooks).post(protect, admin, createBook);
 // router.get('/top', getTopBooks);
 router
   .route('/:id')
-  .get(checkObjectId, getBookById)
-//   .put(protect, admin, checkObjectId, updateBook)
+  .get(checkObjectId, getBookById).put(protect, admin, checkObjectId, updateBook)
 //   .delete(protect, admin, checkObjectId, deleteBook);
 
 export default router;

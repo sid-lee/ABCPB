@@ -38,18 +38,18 @@ const createBook = asyncHandler( async (req, res) => {
         user: req.user._id,
         title: 'Sample title',
         image: '/images/sample.jpg',
-        selfLink: 'Sample self link',
-        authors: 'Sample authors',
-        category: 'Sample category',
+        selfLink: 'http://sample.self-link/',
+        authors: 'Mark Twain, Sidney Wolf',
+        category: 'Horror | Romance',
         description: 'Sample description',
         ISBN: '0000000000-0',
         price: 0.0,
         stockQty: 0,
         rating: 0,
         reviewsCount: 0,
-        publisher: 'Ssmple Publisher',
-        publishedDate: '1800-01-01',
-        subject: 'Sample Subject',
+        publisher: 'Random Publisher',
+        publishedDate: '2023-11-02',
+        subject: 'Computer Programming Language',
         google_id: '',
     }) ;
 
@@ -58,8 +58,49 @@ const createBook = asyncHandler( async (req, res) => {
     res.status(201).json( createdBook ) ;
 });
 
+// @desc    Update a book
+// @route   PUT /api/books/:id
+// @access  Private/Admin
+const updateBook = asyncHandler(async (req, res) => {
+
+    const { 
+        title, image, price, selfLink, authors, category, 
+        description, ISBN, stockQty, rating, reviewsCount,  
+        publisher, publishedDate, subject, google_id } =
+      req.body;
+  
+    const book = await Book.findById(req.params.id);
+  
+    if (book) {
+        book.title = title;
+        book.image = image;
+        book.price = price;
+        book.selfLink = selfLink;
+        book.authors = authors;
+        book.authors = authors;
+        book.category = category;
+        book.description = description;
+        book.ISBN = ISBN;
+        book.stockQty = stockQty;
+        book.rating = rating;
+        book.reviewsCount = reviewsCount;
+        book.publisher = publisher;
+        book.publishedDate = publishedDate;
+        book.subject = subject;
+        book.google_id = google_id;
+  
+      const updatedProduct = await book.save();
+      res.json(updatedProduct);
+
+    } else {
+      res.status(404);
+      throw new Error('Book not found');
+    }
+  });
+
 export { 
     getBooks, 
     getBookById,
-    createBook 
+    createBook,
+    updateBook
 };
