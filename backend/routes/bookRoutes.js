@@ -4,8 +4,8 @@ import {
   getBooks,
   getBookById,
   createBook,
-  updateBook
-//   deleteBook,
+  updateBook,
+  deleteBook
 //   createBookReview,
 //   getTopBooks,
 } from '../controllers/bookController.js';
@@ -17,7 +17,8 @@ router.route('/').get(getBooks).post(protect, admin, createBook);
 // router.get('/top', getTopBooks);
 router
   .route('/:id')
-  .get(checkObjectId, getBookById).put(protect, admin, checkObjectId, updateBook)
-//   .delete(protect, admin, checkObjectId, deleteBook);
+  .get(checkObjectId, getBookById)
+  .put(protect, admin, checkObjectId, updateBook)
+  .delete(protect, admin, checkObjectId, deleteBook);
 
 export default router;

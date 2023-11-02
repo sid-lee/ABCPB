@@ -6,7 +6,7 @@ import Message from '../../components/Message';
 import Loader from '../../components/Loader';
 import {
     useGetBooksQuery,
-    // useDeleteBookMutation,
+    useDeleteBookMutation,
     useCreateBookMutation
   } from '../../slices/booksApiSlice';
   import { toast } from 'react-toastify';
@@ -14,24 +14,31 @@ import {
 
 const BookListScreen = () => {
 
-    const { data: books, isLoading, error} = useGetBooksQuery();
-
+    const { data: books, isLoading, error, refetch} = useGetBooksQuery();
     const [ createBook, {isLoading: loadingCreate}] = useCreateBookMutation();
+    const [ deleteBook, {isLoading: loadingDelete}] = useDeleteBookMutation();
 
-    const deleteHandler = (id) =>  {
-        console.log('delete', id);
+    const deleteHandler = async (id) =>  {
+
+        if (window.confirm('Are you sure to delete this book?')) {
+            try {
+                await deleteBook(id);
+                refetch();
+            } catch(error){
+                toast.error(error?.data?.message || error.error );
+            }
+        }
     };
 
     const createBookHandler = async() => {
 
-        if (window.confirm('Are you sure you want to create a new book?')) {
+        if (window.confirm('Are you sure to create a new book?')) {
             try {
                 await createBook();
-                // refetch();
+                refetch();
             } catch(error){
                 toast.error(error?.data?.message || error.error );
             }
-            
         }
     };
 
@@ -48,6 +55,7 @@ const BookListScreen = () => {
             </Col>
         </Row>
 
+        { loadingDelete && <Loader /> }
         { loadingCreate && <Loader /> }
 
         { isLoading ? <Loader /> : 
