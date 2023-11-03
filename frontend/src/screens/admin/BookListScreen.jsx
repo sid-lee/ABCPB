@@ -23,6 +23,7 @@ const BookListScreen = () => {
         if (window.confirm('Are you sure to delete this book?')) {
             try {
                 await deleteBook(id);
+                toast.success('Book deleted');
                 refetch();
             } catch(error){
                 toast.error(error?.data?.message || error.error );

@@ -113,10 +113,47 @@ const deleteBook = asyncHandler(async (req, res) => {
     }
   });
 
+// @desc    Create a book review
+// @route   DELETE /api/books/:id
+// @access  Private/Admin
+const createBookReview = asyncHandler(async (req, res) => {
+    const { rating, comment } = req.body;
+    const book = await Book.findById(req.params.id);
+  
+    if (book) {
+        const alreadyReviewed = book.reviews.find(
+            ( review ) => review.user.toString() === req.user._id.toString()
+        );
+
+        if (alreadyReviewed){
+            res.status(400);
+            throw new Error('Book already reviewed');
+        }
+
+        const review = {
+            name: req.user.name,
+            rating: Number(rating),
+            comment: comment,
+            user: req.user._id,
+        };
+
+        book.reviews.push(review);
+        book.reviewsCount = book.reviews.length;
+        book.rating = book.reviews.reduce( (acc,review) => acc + review.rating, 0) / book.reviews.length;
+      
+        await book.save();
+        res.status(200).json({message: 'Review added'});
+    } else {
+      res.status(404);
+      throw new Error('Adding Review Failed');
+    }
+  });
+
 export { 
     getBooks, 
     getBookById,
     createBook,
     updateBook,
-    deleteBook
+    deleteBook,
+    createBookReview
 };

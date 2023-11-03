@@ -180,6 +180,9 @@ const BookEditScreen = () => {
             <Form.Group controlId='stockQty'>
               <Form.Label>Stock Qty</Form.Label>
               <Form.Control type='number' placeholder='Enter stockQty'
+                  min="0"
+                  step="1"
+                  max="1000000000"
                 value={stockQty} onChange={(e) => setStockQty(e.target.value)}
               ></Form.Control>
             </Form.Group>

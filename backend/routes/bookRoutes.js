@@ -5,15 +5,15 @@ import {
   getBookById,
   createBook,
   updateBook,
-  deleteBook
-//   createBookReview,
+  deleteBook,
+  createBookReview
 //   getTopBooks,
 } from '../controllers/bookController.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 import checkObjectId from '../middleware/checkObjectId.js';
 
 router.route('/').get(getBooks).post(protect, admin, createBook);
-// router.route('/:id/reviews').post(protect, checkObjectId, createBookReview);
+router.route('/:id/reviews').post(protect, checkObjectId, createBookReview);
 // router.get('/top', getTopBooks);
 router
   .route('/:id')
