@@ -1,7 +1,9 @@
 
+import { useParams } from 'react-router-dom';
+import Paginate from '../../components/Paginate';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button, Row, Col } from 'react-bootstrap';
-import { FaEdit, FaPlus, FaTrash } from 'react-icons/fa';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
 import {
@@ -9,12 +11,14 @@ import {
     useDeleteBookMutation,
     useCreateBookMutation
   } from '../../slices/booksApiSlice';
+ 
   import { toast } from 'react-toastify';
   
 
 const BookListScreen = () => {
 
-    const { data: books, isLoading, error, refetch} = useGetBooksQuery();
+    const { pageNumber } = useParams();
+    const { data, isLoading, error, refetch} = useGetBooksQuery({pageNumber,});
     const [ createBook, {isLoading: loadingCreate}] = useCreateBookMutation();
     const [ deleteBook, {isLoading: loadingDelete}] = useDeleteBookMutation();
 
@@ -74,7 +78,7 @@ const BookListScreen = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {books.map((book)=> (
+                        {data.map((book)=> (
                             <tr key={book._id}>
                                 <td>{book._id}</td>
                                 <td>{book.title}</td>
@@ -95,6 +99,7 @@ const BookListScreen = () => {
                         ))}
                     </tbody>
                 </Table>
+                <Paginate pages={data.totalPages} page={data.currentPage} isAdmin={true} />
             </>
         )}
     </>

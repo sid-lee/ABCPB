@@ -82,6 +82,7 @@ const OrderScreen = () => {
   function createOrder(data, actions) {
     return actions.order
       .create({
+        intent: "CAPTURE",
         purchase_units: [
           {
             reference_id: orderId,

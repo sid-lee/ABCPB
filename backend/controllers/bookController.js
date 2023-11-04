@@ -6,9 +6,12 @@ import Book from '../models/bookModel.js' ;
 // @access Public
 const getBooks = asyncHandler( async (req, res) => {
 
-    const books = await Book.find({}) ;
-    res.json( books ) ;
-    
+    const pageSize = process.env.PAGINATION_LIMIT;
+    const page = Number(req.query.pageNumber) || 1;
+    const count = await Book.countDocuments();
+    const books = await Book.find({}).limit(pageSize).skip(pageSize * (page - 1));
+    console.log('Current Page at getbooks: ', page );
+    res.json({ books, page, pages: Math.ceil(count / pageSize) });
 });
 
 // @desc Fetch a book
