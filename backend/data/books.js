@@ -1,7 +1,7 @@
 const books = [
   {
     title: 'Synchromy',
-    image: 'http://dummyimage.com/153x100.png/dddddd/000000',
+    image: '/images/1.jpg',
     selfLink: 'http://irs.gov/blandit/mi/in/porttitor/pede/justo.aspx?pharetra=ridiculus&magna=mus&vestibulum=etiam&aliquet=vel&ultrices=augue&erat=vestibulum&tortor=rutrum&sollicitudin=rutrum&mi=neque&sit=aenean&amet=auctor&lobortis=gravida&sapien=sem&sapien=praesent&non=id&mi=massa&integer=id&ac=nisl&neque=venenatis&duis=lacinia&bibendum=aenean&morbi=sit&non=amet&quam=justo&nec=morbi&dui=ut&luctus=odio&rutrum=cras&nulla=mi&tellus=pede&in=malesuada&sagittis=in&dui=imperdiet&vel=et&nisl=commodo&duis=vulputate&ac=justo&nibh=in&fusce=blandit&lacus=ultrices&purus=enim&aliquet=lorem&at=ipsum&feugiat=dolor&non=sit&pretium=amet&quis=consectetuer&lectus=adipiscing',
     authors: 'Dorie Semmens',
     category: 'Animation',

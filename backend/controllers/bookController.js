@@ -8,9 +8,18 @@ const getBooks = asyncHandler( async (req, res) => {
 
     const pageSize = process.env.PAGINATION_LIMIT;
     const page = Number(req.query.pageNumber) || 1;
-    const count = await Book.countDocuments();
-    const books = await Book.find({}).limit(pageSize).skip(pageSize * (page - 1));
-    console.log('Current Page at getbooks: ', page );
+    const keyword = req.query.keyword 
+    ? {
+        $or: [
+          { title: { $regex: req.query.keyword, $options: 'i' } },
+          { authors: { $regex: req.query.keyword, $options: 'i' } },
+          { description: { $regex: req.query.keyword, $options: 'i' } },
+          { subject: { $regex: req.query.keyword, $options: 'i' } },
+        ],
+      }
+    : {};
+    const count = await Book.countDocuments({ ...keyword});
+    const books = await Book.find({...keyword}).limit(pageSize).skip(pageSize * (page - 1));
     res.json({ books, page, pages: Math.ceil(count / pageSize) });
 });
 

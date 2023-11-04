@@ -5,18 +5,18 @@ const Paginate = ({ pages, page, isAdmin = false, keyword = '' }) => {
   return (
     pages > 1 && (
       <Pagination>
-        {[...Array(pages).keys()].map((x) => (
+          {Array.from({ length: pages }, (_, index) => index + 1).map((pageNumber) => (
           <LinkContainer
-            key={x + 1}
+            key={pageNumber}
             to={
               !isAdmin
                 ? keyword
-                  ? `/search/${keyword}/page/${x + 1}`
-                  : `/page/${x + 1}`
-                : `/admin/productlist/${x + 1}`
+                  ? `/search/${keyword}/page/${pageNumber}`
+                  : `/page/${pageNumber}`
+                : `/admin/booklist/${pageNumber}`
             }
           >
-            <Pagination.Item active={x + 1 === page}>{x + 1}</Pagination.Item>
+            <Pagination.Item active={pageNumber === page}>{pageNumber}</Pagination.Item>
           </LinkContainer>
         ))}
       </Pagination>

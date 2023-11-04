@@ -42,7 +42,7 @@ const BookScreen = () => {
         }).unwrap();
         refetch();
         toast.success('Review created successfully');
-        
+
         } catch (err) {
             toast.error(err?.data?.message || err.error);
         }
@@ -63,9 +63,15 @@ const BookScreen = () => {
                     <Col md={4}>
                         <ListGroup variant='flush'>
                             <ListGroup.Item><h3>{book.title}</h3></ListGroup.Item>
+                            <ListGroup.Item><strong>Authors</strong>: {book.authors}</ListGroup.Item>
+                            <ListGroup.Item><strong>Publisher</strong>: {book.publisher}</ListGroup.Item>
+                            <ListGroup.Item><strong>Published Date</strong>: {book.publishedDate}</ListGroup.Item>
+                            <ListGroup.Item><strong>Category</strong>: {book.category}</ListGroup.Item>
+                            <ListGroup.Item><strong>Subject</strong>: {book.subject}</ListGroup.Item>
+                            <ListGroup.Item><strong>ISBN</strong>: {book.ISBN}</ListGroup.Item>
                             <ListGroup.Item><Rating value={book.rating} text={`${book.reviewsCount} reviews`} /></ListGroup.Item>
-                            <ListGroup.Item>Price: $ {book.price}</ListGroup.Item>
-                            <ListGroup.Item>Description: {book.description}</ListGroup.Item>
+                            <ListGroup.Item><strong>Price</strong>: $ {book.price}</ListGroup.Item>
+                            <ListGroup.Item><strong>Description</strong>: {book.description}</ListGroup.Item>
                         </ListGroup>
                     </Col>
                     <Col md={3}>

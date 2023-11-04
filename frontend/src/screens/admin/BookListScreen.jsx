@@ -78,7 +78,7 @@ const BookListScreen = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((book)=> (
+                        {data.books.map((book)=> (
                             <tr key={book._id}>
                                 <td>{book._id}</td>
                                 <td>{book.title}</td>
@@ -99,7 +99,7 @@ const BookListScreen = () => {
                         ))}
                     </tbody>
                 </Table>
-                <Paginate pages={data.totalPages} page={data.currentPage} isAdmin={true} />
+                <Paginate pages={data.pages} page={data.page} isAdmin={true} />
             </>
         )}
     </>
