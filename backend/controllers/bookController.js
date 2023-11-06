@@ -14,6 +14,7 @@ const getBooks = asyncHandler( async (req, res) => {
           { title: { $regex: req.query.keyword, $options: 'i' } },
           { authors: { $regex: req.query.keyword, $options: 'i' } },
           { description: { $regex: req.query.keyword, $options: 'i' } },
+          { category: { $regex: req.query.keyword, $options: 'i' } },
           { subject: { $regex: req.query.keyword, $options: 'i' } },
         ],
       }
@@ -35,7 +36,7 @@ const getBookById = asyncHandler( async (req, res) => {
     } 
     else {
         // NOTE: this will run if a valid ObjectId but no product was found
-        // i.e. product may be null
+        // i.e. book may be null
         res.status(404) ;
         throw new Error('Book not found');
     }
@@ -123,7 +124,7 @@ const deleteBook = asyncHandler(async (req, res) => {
       res.status(404);
       throw new Error('Book not found');
     }
-  });
+});
 
 // @desc    Create a book review
 // @route   DELETE /api/books/:id
@@ -159,7 +160,25 @@ const createBookReview = asyncHandler(async (req, res) => {
       res.status(404);
       throw new Error('Adding Review Failed');
     }
-  });
+});
+
+// @desc Get top rated books
+// @route GET/api/books/top
+// @access Public
+const getTopBooks = asyncHandler( async (req, res) => {
+    
+    const books = await Book.find({}).sort({rating: -1}).limit(3) ;
+
+    if ( books ) {
+        return res.status(200).json(books) ;
+    } 
+    else {
+        // NOTE: this will run if a valid ObjectId but no product was found
+        // i.e. books may be null
+        res.status(404) ;
+        throw new Error('Top Books not found');
+    }
+});
 
 export { 
     getBooks, 
@@ -167,5 +186,6 @@ export {
     createBook,
     updateBook,
     deleteBook,
-    createBookReview
+    createBookReview,
+    getTopBooks,
 };

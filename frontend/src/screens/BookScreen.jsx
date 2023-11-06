@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import Meta from '../components/Meta' ;
 import CustomQuantityInput from '../components/CustomQuantityInput';
 import { useGetBookDetailsQuery, useCreateReviewMutation } from '../slices/booksApiSlice';
 import { addToCart } from '../slices/cartSlice';
@@ -58,6 +59,16 @@ const BookScreen = () => {
                 <Message variant='danger'>{ error?.data.message || error.error }</Message> 
             ) : (
                 <>
+                <Meta 
+                    title={book.title}
+                    description={book.description}
+                    author={book.authors}
+                    keywords={book.subject}
+                    ogTitle={book.title}
+                    ogDescription={book.description}
+                    ogImage={book.image}
+                />
+
                 <Row>
                     <Col md={5}><Image src={book.image} alt={book.title} fluid /></Col>
                     <Col md={4}>

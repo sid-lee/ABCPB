@@ -1,10 +1,13 @@
 import { Row, Col } from 'react-bootstrap' ;
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useGetBooksQuery } from '../slices/booksApiSlice';
 import Book from '../components/Book';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
+import Meta from '../components/Meta' ;
+import BookCarousel from '../components/BookCarousel';
 
 const HomeScreen = () => {
 
@@ -15,6 +18,8 @@ const HomeScreen = () => {
 
   return (
     <>
+    { !keyword ? <BookCarousel /> : (<Link to='/' className='btn btn-light mb-4'>Go Back</Link>)}
+
     {isLoading ? (
       <Loader />
     ) : error ? (
@@ -23,6 +28,7 @@ const HomeScreen = () => {
       </Message>
     ) : (
       <>
+        <Meta />
         <h2>Latest Books</h2>
         <Row>
           {data.books.map((book) => (

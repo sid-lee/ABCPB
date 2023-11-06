@@ -1,41 +1,41 @@
 const books = [
   {
-    title: 'Synchromy',
+    title: 'Rieden Reece and the Final Flower: Mystery, Adventure and a Thirteen-Year-Old Hero\’s Journey. (Middle Grade Science Fiction and Fantasy. Book 2 of 7 Book Series.)',
     image: '/images/1.jpg',
-    selfLink: 'http://irs.gov/blandit/mi/in/porttitor/pede/justo.aspx?pharetra=ridiculus&magna=mus&vestibulum=etiam&aliquet=vel&ultrices=augue&erat=vestibulum&tortor=rutrum&sollicitudin=rutrum&mi=neque&sit=aenean&amet=auctor&lobortis=gravida&sapien=sem&sapien=praesent&non=id&mi=massa&integer=id&ac=nisl&neque=venenatis&duis=lacinia&bibendum=aenean&morbi=sit&non=amet&quam=justo&nec=morbi&dui=ut&luctus=odio&rutrum=cras&nulla=mi&tellus=pede&in=malesuada&sagittis=in&dui=imperdiet&vel=et&nisl=commodo&duis=vulputate&ac=justo&nibh=in&fusce=blandit&lacus=ultrices&purus=enim&aliquet=lorem&at=ipsum&feugiat=dolor&non=sit&pretium=amet&quis=consectetuer&lectus=adipiscing',
-    authors: 'Dorie Semmens',
-    category: 'Animation',
-    ISBN: '169535866-X',
-    description: 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.',
-    price: 6.32,
+    selfLink: 'https://www.amazon.ca/Rieden-Reece-Final-Flower-Thirteen-Year-Old/dp/B0C97P4CNJ',
+    authors: 'Matt Guzman',
+    category: 'Children\'s Books, Literature & Fiction',
+    ISBN: '979-8986509853',
+    description: 'Infection. Infestation. Infinity… Can Ri untangle this latest madness? A terrible threat to humanity\’s existence which he helped create\?\nThere\’s something strange stirring within the sleepy town of Desert Lime. Faint and wild whispers in the wind. Otherworldly murmurs from across the expanse of space and time. Crafty shape-shifters have crept into his school.\nRi is intertwined in another epic adventure where he\’s compelled to outwit bizarre life forms with insidious intentions. But first can he unmask their leader? A stealthy and mysterious alien called the Plague Doctor.\n\nNo one is safe.\n\nIn a race to determine who to trust he must stop the planet from crumbling into a barren wasteland before time runs out…\n\nThat’s it. No pressure.\n\nWill Ri step up and become the hero we all need? Once again, the fate of our world rests upon the shoulders of a snarky thirteen-year-old!',
+    price: 19.88,
     stockQty: 44,
-    rating: 4.7,
-    reviewsCount: 92,
-    publisher: 'Quamba',
-    publishedDate: '1967-04-29',
+    rating: 0.0,
+    reviewsCount: 0,
+    publisher: 'MINDFAST PUBLISHING',
+    publishedDate: '2023-07-15',
     google_id: '77RGTT0fC8jy',
-    subject: 'open system'
+    subject: 'Children\'s Books, Literature & Fiction, Middle Grade Science Fiction and Fantasy'
   },
   {
-    title: 'Battle of amfAR, The',
-    image: 'http://dummyimage.com/149x100.png/5fa2dd/ffffff',
-    selfLink: 'https://geocities.com/volutpat/in/congue/etiam/justo.js?sit=ante&amet=ipsum&nunc=primis&viverra=in&dapibus=faucibus&nulla=orci&suscipit=luctus&ligula=et&in=ultrices&lacus=posuere&curabitur=cubilia&at=curae',
-    authors: 'Durant Renac',
-    category: 'Documentary',
-    ISBN: '568983347-9',
-    description: 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
-    price: 6.34,
+    title: 'Boost: Lift Your Energy, Lose Your Stress, and Love Your Life!',
+    image: '/images/2.jpg',
+    selfLink: 'https://www.amazon.ca/Boost-Lift-Your-Energy-Stress/dp/1647465818',
+    authors: 'Zee Dammerel',
+    category: 'Health, Fitness & Dieting, Personal Health',
+    ISBN: '1647465818',
+    description: 'Practical Ways to Balance Your Life and Lift Your Energy Level.\n\nMany of us are struggling to live well in a world that is not well. Boost offers thought-provoking information and intelligent advice for making positive and healthy changes for the way ahead, for ourselves, AND for our ailing planet.\n\nWe are overloading on technology as we, and our children, have become addicted to being entertained! As technology inserts itself deeper into every day, we are paying a price in chronic tiredness and exhaustion, stress, illness, mounting debt, fractured families, diminishing communities, and ultimately, world unrest. Our lives are becoming unbalanced—and without balance, we must eventually trip and fall over.\n\nIn Boost you will discover:\n\nThe surprisingly simple way to create a balance in your life\nHow to get off the technology treadmill\nHow to make small adjustments that will lift your energy levels\nHow to raise the energy level in your home so that it recharges you\n\“Light bulb\” moments of understanding as you gain personal insights about yourself and learn how simple changes can produce huge results.\n\nBoost offers wisdom and facts that will support you, and the people you love, to blossom and grow. This book is about regaining balance, improving health, and finding the energy to truly enjoy life in the 21st century. Boost is about energy—something most people can’t get enough of!\n\nAuthor Zee Dammerel answers your questions about energy: what it is, where it comes from, and most important of all, how to get more so you can live a better life!\n\nIt IS possible to feel switched on and energized every day, all day, and that\’s where Boost comes in to show you ways to lift your energy levels.\n\nBoost shows you how to make your workday more rewarding, and how to compartmentalize it so it doesn\’t drive you 24/7.\n\nClick the ‘Look Inside” feature to begin reading now.',
+    price: 19.22,
     stockQty: 1,
-    rating: 2.9,
+    rating: 0.0,
     reviewsCount: 375,
-    publisher: 'Vitz',
-    publishedDate: '2007-07-01',
+    publisher: 'Author Academy Elite',
+    publishedDate: '2020-12-11',
     google_id: 'jOb2T6S1SfFo',
-    subject: 'benchmark'
+    subject: 'Health, Fitness & Dieting, Personal Health'
   },
   {
     title: 'Art of the Steal, The',
-    image: 'http://dummyimage.com/201x100.png/dddddd/000000',
+    image: '/images/3.jpg',
     selfLink: 'https://lulu.com/sapien/arcu/sed/augue/aliquam/erat.png?tincidunt=dignissim&ante=vestibulum&vel=vestibulum&ipsum=ante&praesent=ipsum&blandit=primis&lacinia=in&erat=faucibus&vestibulum=orci&sed=luctus&magna=et&at=ultrices&nunc=posuere&commodo=cubilia&placerat=curae&praesent=nulla&blandit=dapibus&nam=dolor&nulla=vel',
     authors: 'Demeter Powney',
     category: 'Documentary',
@@ -52,7 +52,7 @@ const books = [
   },
   {
     title: 'Dark Angel, The',
-    image: 'http://dummyimage.com/156x100.png/dddddd/000000',
+    image: '/images/4.jpg',
     selfLink: 'https://latimes.com/morbi/sem/mauris/laoreet/ut/rhoncus.png?nunc=in&vestibulum=sagittis&ante=dui&ipsum=vel&primis=nisl&in=duis&faucibus=ac&orci=nibh&luctus=fusce&et=lacus&ultrices=purus&posuere=aliquet&cubilia=at&curae=feugiat&mauris=non&viverra=pretium&diam=quis&vitae=lectus&quam=suspendisse&suspendisse=potenti&potenti=in&nullam=eleifend&porttitor=quam&lacus=a&at=odio&turpis=in&donec=hac&posuere=habitasse&metus=platea&vitae=dictumst&ipsum=maecenas&aliquam=ut&non=massa&mauris=quis&morbi=augue&non=luctus&lectus=tincidunt&aliquam=nulla&sit=mollis&amet=molestie&diam=lorem&in=quisque&magna=ut&bibendum=erat&imperdiet=curabitur&nullam=gravida&orci=nisi&pede=at&venenatis=nibh&non=in&sodales=hac&sed=habitasse&tincidunt=platea&eu=dictumst&felis=aliquam&fusce=augue&posuere=quam&felis=sollicitudin&sed=vitae&lacus=consectetuer&morbi=eget&sem=rutrum&mauris=at&laoreet=lorem&ut=integer&rhoncus=tincidunt&aliquet=ante&pulvinar=vel&sed=ipsum&nisl=praesent&nunc=blandit&rhoncus=lacinia',
     authors: 'Aurelia MacVicar',
     category: 'Drama|Romance',
@@ -69,7 +69,7 @@ const books = [
   },
   {
     title: 'Skeletons',
-    image: 'http://dummyimage.com/106x100.png/5fa2dd/ffffff',
+    image: '/images/5.jpg',
     selfLink: 'http://timesonline.co.uk/lobortis/vel/dapibus/at/diam/nam/tristique.jpg?penatibus=praesent&et=blandit&magnis=lacinia&dis=erat&parturient=vestibulum&montes=sed&nascetur=magna&ridiculus=at&mus=nunc&etiam=commodo&vel=placerat&augue=praesent&vestibulum=blandit&rutrum=nam&rutrum=nulla&neque=integer&aenean=pede&auctor=justo&gravida=lacinia&sem=eget&praesent=tincidunt&id=eget&massa=tempus&id=vel&nisl=pede&venenatis=morbi&lacinia=porttitor&aenean=lorem&sit=id&amet=ligula&justo=suspendisse&morbi=ornare&ut=consequat&odio=lectus&cras=in&mi=est&pede=risus&malesuada=auctor&in=sed&imperdiet=tristique&et=in&commodo=tempus&vulputate=sit&justo=amet&in=sem&blandit=fusce&ultrices=consequat&enim=nulla&lorem=nisl&ipsum=nunc&dolor=nisl&sit=duis&amet=bibendum&consectetuer=felis&adipiscing=sed&elit=interdum&proin=venenatis&interdum=turpis&mauris=enim&non=blandit&ligula=mi',
     authors: 'Roanna Otson',
     category: 'Comedy|Fantasy',
@@ -86,7 +86,7 @@ const books = [
   },
   {
     title: 'Blood Beast Terror, The',
-    image: 'http://dummyimage.com/243x100.png/ff4444/ffffff',
+    image: '/images/6.jpg',
     selfLink: 'https://php.net/eget.aspx?consectetuer=massa&adipiscing=quis&elit=augue&proin=luctus&interdum=tincidunt&mauris=nulla&non=mollis&ligula=molestie&pellentesque=lorem&ultrices=quisque&phasellus=ut&id=erat&sapien=curabitur&in=gravida&sapien=nisi&iaculis=at&congue=nibh&vivamus=in&metus=hac&arcu=habitasse&adipiscing=platea&molestie=dictumst&hendrerit=aliquam&at=augue&vulputate=quam&vitae=sollicitudin&nisl=vitae&aenean=consectetuer&lectus=eget&pellentesque=rutrum&eget=at&nunc=lorem&donec=integer&quis=tincidunt&orci=ante&eget=vel&orci=ipsum&vehicula=praesent&condimentum=blandit&curabitur=lacinia&in=erat&libero=vestibulum&ut=sed&massa=magna&volutpat=at&convallis=nunc&morbi=commodo&odio=placerat&odio=praesent&elementum=blandit&eu=nam&interdum=nulla&eu=integer&tincidunt=pede&in=justo&leo=lacinia&maecenas=eget&pulvinar=tincidunt&lobortis=eget&est=tempus&phasellus=vel&sit=pede&amet=morbi&erat=porttitor&nulla=lorem&tempus=id&vivamus=ligula&in=suspendisse&felis=ornare&eu=consequat&sapien=lectus&cursus=in&vestibulum=est&proin=risus&eu=auctor&mi=sed&nulla=tristique&ac=in&enim=tempus&in=sit&tempor=amet&turpis=sem&nec=fusce&euismod=consequat&scelerisque=nulla&quam=nisl&turpis=nunc&adipiscing=nisl&lorem=duis&vitae=bibendum&mattis=felis&nibh=sed',
     authors: 'Eugenius Mabone',
     category: 'Crime|Horror|Mystery',
@@ -103,7 +103,7 @@ const books = [
   },
   {
     title: 'Nude Nuns with Big Guns',
-    image: 'http://dummyimage.com/176x100.png/ff4444/ffffff',
+    image: '/images/7.jpg',
     selfLink: 'https://diigo.com/ut/nunc/vestibulum/ante/ipsum.aspx?augue=erat&aliquam=fermentum',
     authors: 'Fidelia Swaffield',
     category: 'Action|Comedy',
@@ -120,7 +120,7 @@ const books = [
   },
   {
     title: 'Hot Fuzz',
-    image: 'http://dummyimage.com/228x100.png/dddddd/000000',
+    image: '/images/8.jpg',
     selfLink: 'https://bbc.co.uk/metus/vitae/ipsum/aliquam/non/mauris.js?vestibulum=libero&ante=convallis&ipsum=eget&primis=eleifend&in=luctus&faucibus=ultricies&orci=eu&luctus=nibh&et=quisque&ultrices=id&posuere=justo&cubilia=sit&curae=amet&nulla=sapien&dapibus=dignissim&dolor=vestibulum&vel=vestibulum&est=ante&donec=ipsum',
     authors: 'Siana Machon',
     category: 'Action|Comedy|Crime|Mystery',
@@ -137,7 +137,7 @@ const books = [
   },
   {
     title: 'Naan Kadavul',
-    image: 'http://dummyimage.com/182x100.png/5fa2dd/ffffff',
+    image: '/images/9.jpg',
     selfLink: 'http://skyrock.com/sapien/cursus/vestibulum.json?vel=integer&sem=tincidunt&sed=ante&sagittis=vel&nam=ipsum&congue=praesent&risus=blandit&semper=lacinia&porta=erat&volutpat=vestibulum&quam=sed&pede=magna&lobortis=at&ligula=nunc&sit=commodo&amet=placerat&eleifend=praesent&pede=blandit&libero=nam&quis=nulla&orci=integer&nullam=pede&molestie=justo&nibh=lacinia&in=eget&lectus=tincidunt&pellentesque=eget&at=tempus&nulla=vel&suspendisse=pede&potenti=morbi&cras=porttitor&in=lorem&purus=id&eu=ligula&magna=suspendisse&vulputate=ornare&luctus=consequat&cum=lectus&sociis=in&natoque=est&penatibus=risus&et=auctor&magnis=sed&dis=tristique&parturient=in&montes=tempus&nascetur=sit&ridiculus=amet',
     authors: 'Benedetto Grimditch',
     category: 'Action|Drama|Mystery',
@@ -154,7 +154,7 @@ const books = [
   },
   {
     title: 'Piggy',
-    image: 'http://dummyimage.com/112x100.png/cc0000/ffffff',
+    image: '/images/10.jpg',
     selfLink: 'http://mail.ru/aliquet/at/feugiat/non/pretium/quis/lectus.json?pede=pretium&ac=nisl&diam=ut&cras=volutpat&pellentesque=sapien&volutpat=arcu&dui=sed&maecenas=augue&tristique=aliquam&est=erat&et=volutpat&tempus=in&semper=congue&est=etiam&quam=justo&pharetra=etiam&magna=pretium&ac=iaculis&consequat=justo&metus=in&sapien=hac&ut=habitasse&nunc=platea&vestibulum=dictumst&ante=etiam&ipsum=faucibus&primis=cursus&in=urna&faucibus=ut&orci=tellus&luctus=nulla&et=ut&ultrices=erat&posuere=id&cubilia=mauris&curae=vulputate&mauris=elementum&viverra=nullam&diam=varius&vitae=nulla&quam=facilisi&suspendisse=cras&potenti=non&nullam=velit&porttitor=nec&lacus=nisi&at=vulputate&turpis=nonummy&donec=maecenas&posuere=tincidunt&metus=lacus&vitae=at&ipsum=velit&aliquam=vivamus&non=vel&mauris=nulla&morbi=eget&non=eros&lectus=elementum&aliquam=pellentesque&sit=quisque&amet=porta&diam=volutpat&in=erat&magna=quisque&bibendum=erat&imperdiet=eros&nullam=viverra&orci=eget&pede=congue&venenatis=eget&non=semper',
     authors: 'Shelia Revey',
     category: 'Thriller',
@@ -171,7 +171,7 @@ const books = [
   },
   {
     title: 'Ultimate Avengers',
-    image: 'http://dummyimage.com/213x100.png/ff4444/ffffff',
+    image: '/images/11.jpg',
     selfLink: 'http://biblegateway.com/habitasse/platea.jpg?pretium=a&quis=pede&lectus=posuere&suspendisse=nonummy&potenti=integer&in=non&eleifend=velit&quam=donec&a=diam&odio=neque&in=vestibulum&hac=eget&habitasse=vulputate&platea=ut&dictumst=ultrices&maecenas=vel&ut=augue&massa=vestibulum&quis=ante&augue=ipsum&luctus=primis&tincidunt=in&nulla=faucibus&mollis=orci&molestie=luctus&lorem=et&quisque=ultrices&ut=posuere&erat=cubilia&curabitur=curae&gravida=donec&nisi=pharetra&at=magna&nibh=vestibulum&in=aliquet&hac=ultrices&habitasse=erat&platea=tortor&dictumst=sollicitudin&aliquam=mi&augue=sit&quam=amet&sollicitudin=lobortis&vitae=sapien&consectetuer=sapien&eget=non&rutrum=mi&at=integer&lorem=ac&integer=neque&tincidunt=duis&ante=bibendum&vel=morbi&ipsum=non&praesent=quam&blandit=nec&lacinia=dui&erat=luctus&vestibulum=rutrum&sed=nulla&magna=tellus&at=in&nunc=sagittis&commodo=dui&placerat=vel&praesent=nisl',
     authors: 'Tim Menichini',
     category: 'Action|Animation|Children|Sci-Fi',
@@ -188,7 +188,7 @@ const books = [
   },
   {
     title: 'M',
-    image: 'http://dummyimage.com/231x100.png/cc0000/ffffff',
+    image: '/images/12.jpg',
     selfLink: 'http://harvard.edu/vel/lectus/in.html?lacus=vestibulum&morbi=sit&sem=amet&mauris=cursus&laoreet=id&ut=turpis&rhoncus=integer&aliquet=aliquet&pulvinar=massa&sed=id&nisl=lobortis&nunc=convallis&rhoncus=tortor&dui=risus&vel=dapibus&sem=augue&sed=vel&sagittis=accumsan&nam=tellus&congue=nisi&risus=eu&semper=orci&porta=mauris&volutpat=lacinia&quam=sapien&pede=quis&lobortis=libero&ligula=nullam&sit=sit&amet=amet&eleifend=turpis&pede=elementum',
     authors: 'Kareem Gowlett',
     category: 'Crime|Film-Noir|Thriller',
@@ -205,7 +205,7 @@ const books = [
   },
   {
     title: 'Southern Comfort',
-    image: 'http://dummyimage.com/132x100.png/5fa2dd/ffffff',
+    image: '/images/13.jpg',
     selfLink: 'http://blogs.com/et/magnis/dis/parturient/montes/nascetur.xml?et=pede&ultrices=venenatis&posuere=non&cubilia=sodales&curae=sed&mauris=tincidunt&viverra=eu&diam=felis&vitae=fusce&quam=posuere&suspendisse=felis&potenti=sed&nullam=lacus&porttitor=morbi&lacus=sem&at=mauris&turpis=laoreet&donec=ut&posuere=rhoncus&metus=aliquet&vitae=pulvinar&ipsum=sed&aliquam=nisl&non=nunc&mauris=rhoncus&morbi=dui&non=vel&lectus=sem&aliquam=sed&sit=sagittis&amet=nam&diam=congue&in=risus&magna=semper&bibendum=porta&imperdiet=volutpat&nullam=quam&orci=pede&pede=lobortis&venenatis=ligula&non=sit&sodales=amet&sed=eleifend&tincidunt=pede&eu=libero&felis=quis&fusce=orci&posuere=nullam&felis=molestie&sed=nibh&lacus=in&morbi=lectus&sem=pellentesque&mauris=at&laoreet=nulla&ut=suspendisse&rhoncus=potenti&aliquet=cras&pulvinar=in&sed=purus&nisl=eu&nunc=magna&rhoncus=vulputate&dui=luctus&vel=cum&sem=sociis&sed=natoque&sagittis=penatibus&nam=et&congue=magnis&risus=dis&semper=parturient&porta=montes&volutpat=nascetur&quam=ridiculus&pede=mus&lobortis=vivamus&ligula=vestibulum&sit=sagittis&amet=sapien&eleifend=cum&pede=sociis&libero=natoque&quis=penatibus&orci=et&nullam=magnis&molestie=dis&nibh=parturient&in=montes&lectus=nascetur&pellentesque=ridiculus&at=mus&nulla=etiam&suspendisse=vel&potenti=augue',
     authors: 'Madelaine Lapwood',
     category: 'Documentary',
@@ -222,7 +222,7 @@ const books = [
   },
   {
     title: 'Anna Nicole (Anna Nicole Smith Story, The)',
-    image: 'http://dummyimage.com/104x100.png/5fa2dd/ffffff',
+    image: '/images/14.jpg',
     selfLink: 'https://shareasale.com/semper.jsp?felis=augue&sed=quam&lacus=sollicitudin&morbi=vitae&sem=consectetuer&mauris=eget&laoreet=rutrum&ut=at&rhoncus=lorem&aliquet=integer&pulvinar=tincidunt&sed=ante&nisl=vel&nunc=ipsum&rhoncus=praesent&dui=blandit&vel=lacinia&sem=erat&sed=vestibulum&sagittis=sed&nam=magna&congue=at&risus=nunc&semper=commodo&porta=placerat&volutpat=praesent&quam=blandit&pede=nam&lobortis=nulla&ligula=integer&sit=pede&amet=justo&eleifend=lacinia&pede=eget&libero=tincidunt&quis=eget&orci=tempus&nullam=vel&molestie=pede&nibh=morbi&in=porttitor&lectus=lorem&pellentesque=id&at=ligula&nulla=suspendisse&suspendisse=ornare&potenti=consequat&cras=lectus&in=in&purus=est&eu=risus&magna=auctor&vulputate=sed&luctus=tristique&cum=in&sociis=tempus&natoque=sit&penatibus=amet&et=sem&magnis=fusce&dis=consequat&parturient=nulla&montes=nisl&nascetur=nunc&ridiculus=nisl&mus=duis&vivamus=bibendum&vestibulum=felis&sagittis=sed&sapien=interdum&cum=venenatis&sociis=turpis&natoque=enim&penatibus=blandit&et=mi&magnis=in&dis=porttitor&parturient=pede&montes=justo&nascetur=eu&ridiculus=massa&mus=donec&etiam=dapibus&vel=duis&augue=at&vestibulum=velit&rutrum=eu&rutrum=est',
     authors: 'Hadlee Reside',
     category: 'Drama',
@@ -239,7 +239,7 @@ const books = [
   },
   {
     title: 'May in the Summer',
-    image: 'http://dummyimage.com/250x100.png/ff4444/ffffff',
+    image: '/images/15.jpg',
     selfLink: 'https://businesswire.com/leo/maecenas/pulvinar/lobortis.xml?quam=eros&pharetra=suspendisse&magna=accumsan&ac=tortor&consequat=quis',
     authors: 'Deane Pounds',
     category: 'Comedy|Drama',
@@ -256,7 +256,7 @@ const books = [
   },
   {
     title: 'Son of Babylon (Syn Babilonu)',
-    image: 'http://dummyimage.com/215x100.png/5fa2dd/ffffff',
+    image: '/images/16.jpg',
     selfLink: 'https://dailymail.co.uk/sit/amet/cursus/id/turpis/integer.jsp?fusce=in&lacus=felis&purus=donec&aliquet=semper&at=sapien&feugiat=a&non=libero&pretium=nam&quis=dui&lectus=proin&suspendisse=leo&potenti=odio&in=porttitor&eleifend=id&quam=consequat&a=in&odio=consequat&in=ut&hac=nulla&habitasse=sed&platea=accumsan&dictumst=felis&maecenas=ut&ut=at&massa=dolor&quis=quis&augue=odio&luctus=consequat&tincidunt=varius&nulla=integer&mollis=ac&molestie=leo&lorem=pellentesque&quisque=ultrices&ut=mattis&erat=odio&curabitur=donec&gravida=vitae&nisi=nisi&at=nam&nibh=ultrices&in=libero&hac=non&habitasse=mattis&platea=pulvinar&dictumst=nulla&aliquam=pede&augue=ullamcorper&quam=augue&sollicitudin=a&vitae=suscipit&consectetuer=nulla&eget=elit&rutrum=ac&at=nulla',
     authors: 'Selby Ferro',
     category: 'Drama',
@@ -273,7 +273,7 @@ const books = [
   },
   {
     title: 'Conan O\'Brien Can\'t Stop',
-    image: 'http://dummyimage.com/130x100.png/5fa2dd/ffffff',
+    image: '/images/17.jpg',
     selfLink: 'https://gnu.org/nam/nulla/integer.jpg?posuere=justo&nonummy=sit&integer=amet&non=sapien&velit=dignissim&donec=vestibulum&diam=vestibulum&neque=ante&vestibulum=ipsum&eget=primis&vulputate=in&ut=faucibus&ultrices=orci&vel=luctus&augue=et&vestibulum=ultrices&ante=posuere&ipsum=cubilia&primis=curae&in=nulla&faucibus=dapibus&orci=dolor&luctus=vel&et=est&ultrices=donec&posuere=odio&cubilia=justo&curae=sollicitudin&donec=ut&pharetra=suscipit&magna=a&vestibulum=feugiat&aliquet=et&ultrices=eros&erat=vestibulum&tortor=ac&sollicitudin=est&mi=lacinia&sit=nisi&amet=venenatis&lobortis=tristique&sapien=fusce&sapien=congue&non=diam&mi=id&integer=ornare&ac=imperdiet&neque=sapien&duis=urna&bibendum=pretium&morbi=nisl&non=ut&quam=volutpat&nec=sapien&dui=arcu&luctus=sed&rutrum=augue&nulla=aliquam&tellus=erat&in=volutpat&sagittis=in&dui=congue&vel=etiam&nisl=justo&duis=etiam&ac=pretium&nibh=iaculis&fusce=justo&lacus=in&purus=hac&aliquet=habitasse&at=platea&feugiat=dictumst&non=etiam',
     authors: 'Inger McMurrugh',
     category: 'Documentary',
@@ -290,7 +290,7 @@ const books = [
   },
   {
     title: 'Kahaani',
-    image: 'http://dummyimage.com/241x100.png/cc0000/ffffff',
+    image: '/images/18.jpg',
     selfLink: 'https://diigo.com/odio/donec/vitae/nisi/nam/ultrices.json?semper=sodales&sapien=scelerisque&a=mauris&libero=sit&nam=amet&dui=eros&proin=suspendisse&leo=accumsan&odio=tortor&porttitor=quis&id=turpis&consequat=sed&in=ante&consequat=vivamus&ut=tortor&nulla=duis&sed=mattis&accumsan=egestas&felis=metus&ut=aenean&at=fermentum&dolor=donec&quis=ut&odio=mauris&consequat=eget&varius=massa&integer=tempor&ac=convallis&leo=nulla&pellentesque=neque&ultrices=libero&mattis=convallis&odio=eget&donec=eleifend&vitae=luctus&nisi=ultricies&nam=eu&ultrices=nibh&libero=quisque&non=id&mattis=justo&pulvinar=sit&nulla=amet&pede=sapien&ullamcorper=dignissim&augue=vestibulum&a=vestibulum&suscipit=ante&nulla=ipsum&elit=primis&ac=in&nulla=faucibus&sed=orci&vel=luctus&enim=et&sit=ultrices&amet=posuere&nunc=cubilia&viverra=curae&dapibus=nulla&nulla=dapibus&suscipit=dolor&ligula=vel&in=est&lacus=donec&curabitur=odio&at=justo&ipsum=sollicitudin&ac=ut&tellus=suscipit&semper=a&interdum=feugiat&mauris=et&ullamcorper=eros&purus=vestibulum&sit=ac&amet=est&nulla=lacinia&quisque=nisi&arcu=venenatis&libero=tristique&rutrum=fusce&ac=congue&lobortis=diam&vel=id&dapibus=ornare&at=imperdiet&diam=sapien&nam=urna',
     authors: 'Taffy Clausson',
     category: 'Crime|Drama|Thriller',
@@ -307,7 +307,7 @@ const books = [
   },
   {
     title: 'Dragon ball Z 04: Lord Slug',
-    image: 'http://dummyimage.com/170x100.png/5fa2dd/ffffff',
+    image: '/images/19.jpg',
     selfLink: 'https://nytimes.com/scelerisque/mauris.jpg?mauris=blandit&sit=mi&amet=in&eros=porttitor&suspendisse=pede&accumsan=justo&tortor=eu&quis=massa&turpis=donec&sed=dapibus&ante=duis&vivamus=at&tortor=velit&duis=eu&mattis=est&egestas=congue&metus=elementum&aenean=in&fermentum=hac&donec=habitasse&ut=platea&mauris=dictumst&eget=morbi&massa=vestibulum&tempor=velit&convallis=id&nulla=pretium&neque=iaculis&libero=diam&convallis=erat&eget=fermentum&eleifend=justo&luctus=nec&ultricies=condimentum&eu=neque&nibh=sapien&quisque=placerat&id=ante&justo=nulla&sit=justo&amet=aliquam&sapien=quis&dignissim=turpis&vestibulum=eget&vestibulum=elit&ante=sodales&ipsum=scelerisque&primis=mauris&in=sit&faucibus=amet&orci=eros&luctus=suspendisse&et=accumsan&ultrices=tortor&posuere=quis&cubilia=turpis&curae=sed&nulla=ante&dapibus=vivamus&dolor=tortor&vel=duis&est=mattis&donec=egestas&odio=metus&justo=aenean&sollicitudin=fermentum&ut=donec&suscipit=ut&a=mauris&feugiat=eget&et=massa&eros=tempor&vestibulum=convallis&ac=nulla&est=neque&lacinia=libero&nisi=convallis&venenatis=eget&tristique=eleifend&fusce=luctus&congue=ultricies&diam=eu',
     authors: 'Fulvia Woosnam',
     category: 'Animation|Children',
@@ -324,7 +324,7 @@ const books = [
   },
   {
     title: 'Surprise',
-    image: 'http://dummyimage.com/148x100.png/5fa2dd/ffffff',
+    image: '/images/20.jpg',
     selfLink: 'http://google.fr/maecenas/ut/massa/quis/augue/luctus/tincidunt.json?semper=lectus&rutrum=vestibulum&nulla=quam&nunc=sapien&purus=varius&phasellus=ut&in=blandit&felis=non&donec=interdum&semper=in&sapien=ante&a=vestibulum&libero=ante&nam=ipsum&dui=primis&proin=in&leo=faucibus&odio=orci&porttitor=luctus&id=et&consequat=ultrices&in=posuere&consequat=cubilia&ut=curae&nulla=duis&sed=faucibus&accumsan=accumsan&felis=odio&ut=curabitur&at=convallis&dolor=duis&quis=consequat&odio=dui&consequat=nec&varius=nisi&integer=volutpat&ac=eleifend&leo=donec&pellentesque=ut&ultrices=dolor&mattis=morbi&odio=vel&donec=lectus&vitae=in&nisi=quam&nam=fringilla&ultrices=rhoncus&libero=mauris&non=enim&mattis=leo&pulvinar=rhoncus&nulla=sed&pede=vestibulum&ullamcorper=sit&augue=amet&a=cursus&suscipit=id&nulla=turpis&elit=integer&ac=aliquet&nulla=massa&sed=id&vel=lobortis&enim=convallis&sit=tortor&amet=risus&nunc=dapibus&viverra=augue&dapibus=vel&nulla=accumsan&suscipit=tellus&ligula=nisi&in=eu&lacus=orci&curabitur=mauris&at=lacinia&ipsum=sapien&ac=quis&tellus=libero&semper=nullam&interdum=sit&mauris=amet&ullamcorper=turpis&purus=elementum',
     authors: 'Caresa Zamudio',
     category: '(no genres listed)',
@@ -341,7 +341,7 @@ const books = [
   },
   {
     title: 'Ballad of the Paper Balloons (a.k.a. Humanity and Paper Balloons) (Ninjô kami fûsen)',
-    image: 'http://dummyimage.com/241x100.png/ff4444/ffffff',
+    image: '/images/21.jpg',
     selfLink: 'http://ibm.com/posuere/cubilia/curae/duis.html?felis=in&donec=hac&semper=habitasse&sapien=platea&a=dictumst&libero=etiam&nam=faucibus&dui=cursus&proin=urna&leo=ut&odio=tellus&porttitor=nulla&id=ut&consequat=erat&in=id&consequat=mauris&ut=vulputate&nulla=elementum&sed=nullam&accumsan=varius&felis=nulla&ut=facilisi&at=cras&dolor=non&quis=velit&odio=nec&consequat=nisi&varius=vulputate&integer=nonummy',
     authors: 'Corny Rubi',
     category: 'Drama',
@@ -358,7 +358,7 @@ const books = [
   },
   {
     title: 'Bûche, La',
-    image: 'http://dummyimage.com/214x100.png/ff4444/ffffff',
+    image: '/images/22.jpg',
     selfLink: 'http://vistaprint.com/interdum.png?cubilia=morbi&curae=vestibulum&duis=velit&faucibus=id&accumsan=pretium&odio=iaculis&curabitur=diam&convallis=erat&duis=fermentum&consequat=justo&dui=nec&nec=condimentum&nisi=neque&volutpat=sapien&eleifend=placerat&donec=ante&ut=nulla&dolor=justo&morbi=aliquam&vel=quis&lectus=turpis&in=eget&quam=elit&fringilla=sodales&rhoncus=scelerisque&mauris=mauris&enim=sit&leo=amet&rhoncus=eros&sed=suspendisse&vestibulum=accumsan&sit=tortor&amet=quis&cursus=turpis&id=sed&turpis=ante&integer=vivamus&aliquet=tortor&massa=duis&id=mattis&lobortis=egestas&convallis=metus&tortor=aenean&risus=fermentum&dapibus=donec&augue=ut&vel=mauris&accumsan=eget&tellus=massa&nisi=tempor&eu=convallis&orci=nulla&mauris=neque&lacinia=libero',
     authors: 'Malina Blunn',
     category: 'Comedy|Drama',
@@ -375,7 +375,7 @@ const books = [
   },
   {
     title: 'Woman in White, The',
-    image: 'http://dummyimage.com/108x100.png/5fa2dd/ffffff',
+    image: '/images/23.jpg',
     selfLink: 'https://google.com/mattis/pulvinar/nulla/pede/ullamcorper/augue/a.json?ut=ac&erat=est&id=lacinia&mauris=nisi&vulputate=venenatis&elementum=tristique&nullam=fusce&varius=congue&nulla=diam&facilisi=id&cras=ornare&non=imperdiet&velit=sapien&nec=urna&nisi=pretium&vulputate=nisl&nonummy=ut&maecenas=volutpat&tincidunt=sapien&lacus=arcu&at=sed&velit=augue&vivamus=aliquam&vel=erat&nulla=volutpat&eget=in&eros=congue&elementum=etiam&pellentesque=justo&quisque=etiam&porta=pretium&volutpat=iaculis&erat=justo&quisque=in&erat=hac&eros=habitasse&viverra=platea&eget=dictumst&congue=etiam&eget=faucibus&semper=cursus&rutrum=urna&nulla=ut&nunc=tellus&purus=nulla&phasellus=ut&in=erat&felis=id&donec=mauris&semper=vulputate&sapien=elementum&a=nullam&libero=varius&nam=nulla&dui=facilisi&proin=cras&leo=non&odio=velit&porttitor=nec&id=nisi&consequat=vulputate&in=nonummy&consequat=maecenas&ut=tincidunt&nulla=lacus&sed=at&accumsan=velit&felis=vivamus&ut=vel&at=nulla&dolor=eget&quis=eros&odio=elementum&consequat=pellentesque&varius=quisque&integer=porta&ac=volutpat&leo=erat&pellentesque=quisque&ultrices=erat&mattis=eros&odio=viverra',
     authors: 'Wylie Haken',
     category: 'Mystery|Thriller',
@@ -392,7 +392,7 @@ const books = [
   },
   {
     title: 'Pelle Svanslös i Amerikatt',
-    image: 'http://dummyimage.com/172x100.png/5fa2dd/ffffff',
+    image: '/images/24.jpg',
     selfLink: 'http://wordpress.org/sapien/cum/sociis/natoque.jsp?nisl=nisl&duis=ut&bibendum=volutpat&felis=sapien&sed=arcu&interdum=sed&venenatis=augue&turpis=aliquam&enim=erat&blandit=volutpat&mi=in&in=congue&porttitor=etiam&pede=justo&justo=etiam&eu=pretium&massa=iaculis&donec=justo&dapibus=in&duis=hac&at=habitasse&velit=platea&eu=dictumst&est=etiam&congue=faucibus&elementum=cursus&in=urna&hac=ut&habitasse=tellus&platea=nulla&dictumst=ut&morbi=erat&vestibulum=id&velit=mauris&id=vulputate&pretium=elementum&iaculis=nullam&diam=varius&erat=nulla&fermentum=facilisi&justo=cras&nec=non&condimentum=velit&neque=nec&sapien=nisi&placerat=vulputate&ante=nonummy&nulla=maecenas&justo=tincidunt&aliquam=lacus&quis=at&turpis=velit&eget=vivamus&elit=vel&sodales=nulla&scelerisque=eget&mauris=eros&sit=elementum&amet=pellentesque&eros=quisque&suspendisse=porta&accumsan=volutpat&tortor=erat&quis=quisque&turpis=erat&sed=eros&ante=viverra&vivamus=eget&tortor=congue&duis=eget&mattis=semper&egestas=rutrum&metus=nulla&aenean=nunc&fermentum=purus&donec=phasellus&ut=in&mauris=felis&eget=donec&massa=semper&tempor=sapien&convallis=a&nulla=libero&neque=nam&libero=dui&convallis=proin&eget=leo&eleifend=odio&luctus=porttitor&ultricies=id&eu=consequat',
     authors: 'Sonja Langthorn',
     category: 'Animation|Children',
@@ -409,7 +409,7 @@ const books = [
   },
   {
     title: 'Island',
-    image: 'http://dummyimage.com/168x100.png/5fa2dd/ffffff',
+    image: '/images/25.jpg',
     selfLink: 'https://geocities.com/nibh/in/hac.png?quisque=pretium&ut=quis&erat=lectus&curabitur=suspendisse&gravida=potenti&nisi=in&at=eleifend&nibh=quam&in=a&hac=odio&habitasse=in&platea=hac&dictumst=habitasse&aliquam=platea&augue=dictumst&quam=maecenas&sollicitudin=ut&vitae=massa&consectetuer=quis&eget=augue&rutrum=luctus&at=tincidunt&lorem=nulla&integer=mollis&tincidunt=molestie&ante=lorem&vel=quisque&ipsum=ut&praesent=erat&blandit=curabitur&lacinia=gravida&erat=nisi&vestibulum=at&sed=nibh&magna=in&at=hac&nunc=habitasse&commodo=platea&placerat=dictumst&praesent=aliquam&blandit=augue&nam=quam&nulla=sollicitudin&integer=vitae&pede=consectetuer&justo=eget&lacinia=rutrum&eget=at&tincidunt=lorem&eget=integer&tempus=tincidunt&vel=ante&pede=vel&morbi=ipsum&porttitor=praesent&lorem=blandit&id=lacinia&ligula=erat&suspendisse=vestibulum&ornare=sed&consequat=magna&lectus=at&in=nunc&est=commodo&risus=placerat&auctor=praesent',
     authors: 'Haven Clout',
     category: 'Drama|Mystery|Thriller',
@@ -426,7 +426,7 @@ const books = [
   },
   {
     title: 'Tabu: A Story of the South Seas',
-    image: 'http://dummyimage.com/180x100.png/dddddd/000000',
+    image: '/images/26.jpg',
     selfLink: 'https://scribd.com/mauris.jpg?odio=pulvinar&odio=sed&elementum=nisl&eu=nunc&interdum=rhoncus&eu=dui&tincidunt=vel&in=sem&leo=sed&maecenas=sagittis&pulvinar=nam&lobortis=congue&est=risus&phasellus=semper&sit=porta&amet=volutpat&erat=quam&nulla=pede&tempus=lobortis&vivamus=ligula&in=sit&felis=amet&eu=eleifend&sapien=pede&cursus=libero&vestibulum=quis&proin=orci&eu=nullam&mi=molestie&nulla=nibh&ac=in&enim=lectus&in=pellentesque&tempor=at&turpis=nulla&nec=suspendisse&euismod=potenti&scelerisque=cras&quam=in&turpis=purus&adipiscing=eu&lorem=magna&vitae=vulputate&mattis=luctus&nibh=cum&ligula=sociis&nec=natoque&sem=penatibus&duis=et&aliquam=magnis&convallis=dis&nunc=parturient&proin=montes&at=nascetur&turpis=ridiculus&a=mus&pede=vivamus&posuere=vestibulum&nonummy=sagittis&integer=sapien&non=cum&velit=sociis&donec=natoque&diam=penatibus&neque=et&vestibulum=magnis&eget=dis&vulputate=parturient&ut=montes&ultrices=nascetur',
     authors: 'Jessie Walsh',
     category: 'Drama|Romance',
@@ -443,7 +443,7 @@ const books = [
   },
   {
     title: 'Funny Games U.S.',
-    image: 'http://dummyimage.com/238x100.png/cc0000/ffffff',
+    image: '/images/27.jpg',
     selfLink: 'https://google.com/praesent/lectus/vestibulum.aspx?lorem=dui&ipsum=vel&dolor=nisl&sit=duis&amet=ac&consectetuer=nibh&adipiscing=fusce&elit=lacus&proin=purus&interdum=aliquet&mauris=at&non=feugiat&ligula=non&pellentesque=pretium&ultrices=quis&phasellus=lectus&id=suspendisse&sapien=potenti&in=in&sapien=eleifend&iaculis=quam&congue=a&vivamus=odio&metus=in&arcu=hac&adipiscing=habitasse&molestie=platea&hendrerit=dictumst&at=maecenas&vulputate=ut&vitae=massa&nisl=quis&aenean=augue&lectus=luctus&pellentesque=tincidunt&eget=nulla&nunc=mollis&donec=molestie&quis=lorem&orci=quisque&eget=ut&orci=erat&vehicula=curabitur&condimentum=gravida&curabitur=nisi&in=at&libero=nibh&ut=in&massa=hac&volutpat=habitasse&convallis=platea&morbi=dictumst&odio=aliquam&odio=augue&elementum=quam&eu=sollicitudin&interdum=vitae&eu=consectetuer&tincidunt=eget&in=rutrum&leo=at&maecenas=lorem&pulvinar=integer&lobortis=tincidunt&est=ante&phasellus=vel&sit=ipsum&amet=praesent&erat=blandit&nulla=lacinia&tempus=erat&vivamus=vestibulum&in=sed&felis=magna&eu=at&sapien=nunc&cursus=commodo&vestibulum=placerat&proin=praesent&eu=blandit&mi=nam&nulla=nulla&ac=integer&enim=pede&in=justo&tempor=lacinia&turpis=eget&nec=tincidunt&euismod=eget&scelerisque=tempus&quam=vel&turpis=pede&adipiscing=morbi&lorem=porttitor',
     authors: 'Aggi Faro',
     category: 'Drama|Thriller',
@@ -460,7 +460,7 @@ const books = [
   },
   {
     title: 'My House in Umbria',
-    image: 'http://dummyimage.com/136x100.png/cc0000/ffffff',
+    image: '/images/28.jpg',
     selfLink: 'https://hao123.com/fusce/posuere/felis/sed/lacus/morbi.aspx?enim=vestibulum&lorem=sagittis&ipsum=sapien&dolor=cum&sit=sociis&amet=natoque&consectetuer=penatibus&adipiscing=et&elit=magnis&proin=dis&interdum=parturient&mauris=montes&non=nascetur&ligula=ridiculus&pellentesque=mus&ultrices=etiam&phasellus=vel&id=augue&sapien=vestibulum&in=rutrum&sapien=rutrum&iaculis=neque&congue=aenean&vivamus=auctor&metus=gravida&arcu=sem&adipiscing=praesent&molestie=id&hendrerit=massa&at=id&vulputate=nisl&vitae=venenatis&nisl=lacinia&aenean=aenean&lectus=sit&pellentesque=amet&eget=justo&nunc=morbi&donec=ut&quis=odio&orci=cras&eget=mi&orci=pede&vehicula=malesuada&condimentum=in&curabitur=imperdiet&in=et&libero=commodo&ut=vulputate&massa=justo&volutpat=in&convallis=blandit&morbi=ultrices&odio=enim&odio=lorem&elementum=ipsum&eu=dolor&interdum=sit&eu=amet&tincidunt=consectetuer&in=adipiscing&leo=elit&maecenas=proin&pulvinar=interdum&lobortis=mauris&est=non&phasellus=ligula&sit=pellentesque&amet=ultrices&erat=phasellus&nulla=id&tempus=sapien&vivamus=in&in=sapien&felis=iaculis&eu=congue&sapien=vivamus&cursus=metus&vestibulum=arcu&proin=adipiscing&eu=molestie&mi=hendrerit&nulla=at&ac=vulputate&enim=vitae&in=nisl&tempor=aenean&turpis=lectus&nec=pellentesque&euismod=eget&scelerisque=nunc&quam=donec&turpis=quis&adipiscing=orci&lorem=eget&vitae=orci&mattis=vehicula&nibh=condimentum',
     authors: 'Daile Sutherland',
     category: 'Drama',
@@ -477,7 +477,7 @@ const books = [
   },
   {
     title: 'Hannah Arendt',
-    image: 'http://dummyimage.com/154x100.png/ff4444/ffffff',
+    image: '/images/29.jpg',
     selfLink: 'http://fda.gov/montes/nascetur/ridiculus/mus/vivamus.json?a=tortor&suscipit=sollicitudin&nulla=mi&elit=sit&ac=amet&nulla=lobortis&sed=sapien&vel=sapien&enim=non&sit=mi&amet=integer&nunc=ac&viverra=neque&dapibus=duis&nulla=bibendum&suscipit=morbi&ligula=non&in=quam&lacus=nec&curabitur=dui&at=luctus&ipsum=rutrum&ac=nulla&tellus=tellus&semper=in&interdum=sagittis&mauris=dui&ullamcorper=vel&purus=nisl&sit=duis&amet=ac&nulla=nibh&quisque=fusce&arcu=lacus&libero=purus&rutrum=aliquet&ac=at&lobortis=feugiat&vel=non&dapibus=pretium&at=quis&diam=lectus&nam=suspendisse&tristique=potenti',
     authors: 'Levin Oliveti',
     category: 'Drama',
@@ -494,7 +494,7 @@ const books = [
   },
   {
     title: 'Vice Versa',
-    image: 'http://dummyimage.com/206x100.png/5fa2dd/ffffff',
+    image: '/images/30.jpg',
     selfLink: 'https://1688.com/leo/odio.aspx?ridiculus=mauris&mus=lacinia&vivamus=sapien&vestibulum=quis&sagittis=libero&sapien=nullam&cum=sit&sociis=amet&natoque=turpis&penatibus=elementum&et=ligula&magnis=vehicula&dis=consequat&parturient=morbi&montes=a&nascetur=ipsum&ridiculus=integer&mus=a&etiam=nibh&vel=in&augue=quis&vestibulum=justo&rutrum=maecenas&rutrum=rhoncus&neque=aliquam&aenean=lacus&auctor=morbi&gravida=quis&sem=tortor&praesent=id&id=nulla&massa=ultrices&id=aliquet&nisl=maecenas&venenatis=leo&lacinia=odio&aenean=condimentum&sit=id&amet=luctus&justo=nec&morbi=molestie&ut=sed&odio=justo&cras=pellentesque&mi=viverra&pede=pede&malesuada=ac&in=diam&imperdiet=cras',
     authors: 'Barbara Biggadyke',
     category: 'Comedy',
