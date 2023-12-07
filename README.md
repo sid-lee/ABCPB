@@ -33,13 +33,30 @@ cd abc-publishers-bookstore
 
 ```
 npm install
+cd frontend
+npm install
 ```
 
-4. Set up the MongoDB database:
+4. Run
+```
+# Run frontend (:3000) & backend (:5001)
+npm run dev
+
+# Run backend only
+npm run server
+```
+
+5. Set up the MongoDB database:
 ```
 npm run data:import
 ```
 
+6. Build and Deploy
+```
+# Create frontend prod build
+cd frontend
+npm run build
+```
 
 # Usage Guide
 ## Running the Application
@@ -55,6 +72,18 @@ npm run client
 ```
 
 Visit http://localhost:3000 in your browser to explore the ABC Publishers Bookstore.
+
+# Env Variables
+Rename the .env.example file to .env and add the following
+```
+NODE_ENV = development
+PORT = 5001
+MONGO_URI = your mongodb uri
+JWT_SECRET = 'abc123'
+PAYPAL_CLIENT_ID = your paypal client id
+PAGINATION_LIMIT = 8
+```
+Change the JWT_SECRET and PAGINATION_LIMIT to what you want
 
 ## API Endpoints
 /api/books: Get all books
@@ -80,15 +109,6 @@ npm run dev
 - Excellent resource for Mongoose in JavaScript
 [https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/] 
 
-From the top directory, install mongoose by running the following command,
-```
-npm i mongoose
-```
-
-# Information regarding bcrypt library used
-- Start with wiki [https://en.wikipedia.org/wiki/Bcrypt]
-- Open source [https://www.openwall.com/crypt/]
-- A paper on the algorithm that explains the design decisions[https://static.usenix.org/events/usenix99/provos/provos_html/index.html]
 
 # Generating or deleting test data on MongoDB 
 To import data
@@ -100,6 +120,23 @@ To delete data
 ```
 npm run data:destroy
 ```
+
+Sample User Logins
+```
+admin@email.com (Admin)
+123456
+
+john@email.com (Customer)
+123456
+
+jane@email.com (Customer)
+123456
+```
+
+# Information regarding bcrypt library used
+- Start with wiki [https://en.wikipedia.org/wiki/Bcrypt]
+- Open source [https://www.openwall.com/crypt/]
+- A paper on the algorithm that explains the design decisions[https://static.usenix.org/events/usenix99/provos/provos_html/index.html]
 
 ------
 
