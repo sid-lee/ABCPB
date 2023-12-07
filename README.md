@@ -1,85 +1,76 @@
-# ABCPB
+# ABC PUBLISHERS BOOKSTORE
 
 # How to set up your working environment
 
-1. Create your project folder (e.g., ACBPublishersBookstore).
-2. Move to the folder and type the command:
+## Project Overview
 
+Welcome to ABC Publishers Bookstore, an e-commerce platform designed to provide a seamless experience for book enthusiasts. This project showcases the latest books, offers a user-friendly search functionality, and ensures optimal user engagement.
+
+## Installation Instructions
+
+To get started with ABC Publishers Bookstore, follow these steps:
+
+### Prerequisites
+
+- Node.js installed
+- MongoDB installed and running
+- Package manager (npm or yarn)
+
+### Installation
+
+1. Clone the repository:
+
+  ```
+   git clone https://github.com/sid-lee/abc-publishers-bookstore.git
+  ```
+
+2. Navigate to the project directory:
 ```bash
-npx create-react-app frontend
+cd abc-publishers-bookstore
 ```
 
-3. Move to the 'frontend' folder. Copy the content of this repository and run:
+3. Install dependencies:
 
 ```
-npm start
+npm install
 ```
 
-# Setting up the 'backend'
-1. Move to the parent directory of 'frontend' and initialize npm:
+4. Set up the MongoDB database:
 ```
-npm init
-```
-
-2. Create the 'backend' folder:
-```
-mkdir backend
+npm run data:import
 ```
 
-3. Edit the 'package.json' file by adding the "start" command under the "scripts" section:
+
+# Usage Guide
+## Running the Application
+Start the backend server
 ```
-"scripts": {
-    "start": "node backend/server.js"
-}
+npm run server
 ```
 
-4. Test if the setup is correct by running the following command:
+Start the frontend
+
 ```
-npm start
+npm run client
 ```
 
-5. If successful, you will see 'Hello, world' on the console.
+Visit http://localhost:3000 in your browser to explore the ABC Publishers Bookstore.
 
-6. Run the following command to install express
-```
-npm i express
-```
+## API Endpoints
+/api/books: Get all books
+/api/books/:id: Get a specific book by ID
+
+# Configuration
+ABC Publishers Bookstore comes with customizable options:
+
+Update configurations in .env for backend settings.
+Adjust frontend settings in the respective configuration files.
+
+## License
+This project is licensed under the MIT License.
+
 
 # Running both front and backend together
-To make your dev life easier, grab nodemon and concurrently. For more information, you can read from npmjs site.
- nodemon[https://www.npmjs.com/package/nodemon] and concurrently[https://www.npmjs.com/package/concurrently]. Install both by typing the following command.
-
-```
- npm install -D nodemon concurrently
-```
-
-```
-npm i -D dotenv
-```
-
-Added 'server', 'client' and 'dev' scripts
-
-```
-  "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-    "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d"
-  }
-```
-
-Peek into your package.json file, and you'll spot some new lines added under "devDependencies".
-
-```
-  "devDependencies": {
-    "concurrently": "^8.2.1",
-    "dotenv": "^16.3.1",
-    "nodemon": "^3.0.1"
-  }
-```
-
 To start both, type in 
 ```
 npm run dev
